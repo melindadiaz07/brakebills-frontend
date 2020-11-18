@@ -5,7 +5,7 @@ const Admissions = () => {
 
   return(
     <div>
-
+      Admissions
     </div>
   )
 }

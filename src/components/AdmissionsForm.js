@@ -4,7 +4,7 @@ const AdmissionsForm = () => {
 
   return(
     <div>
-
+      Admissions Form
     </div>
   )
 }

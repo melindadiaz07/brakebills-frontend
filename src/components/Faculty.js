@@ -5,7 +5,7 @@ const Faculty = () => {
 
   return(
     <div>
-
+      Faculty
     </div>
   )
 }

@@ -5,7 +5,7 @@ const MessageBoard = () => {
 
   return(
     <div>
-      
+      Message Board
     </div>
   )
 }
