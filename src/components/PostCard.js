@@ -2,13 +2,13 @@ import React from 'react';
 import ReplyCard from './ReplyCard'
 
 
-const MessageCard = () => {
+const PostCard = () => {
 
   return(
     <div>
-      
+      <ReplyCard />
     </div>
   )
 }
 
-export default MessageCard
+export default PostCard

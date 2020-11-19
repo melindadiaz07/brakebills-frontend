@@ -1,11 +1,14 @@
 import React from 'react';
-import MessageCard from './MessageCard'
+import PostCard from './PostCard'
+import PostForm from './PostForm'
 
 const MessageBoard = () => {
 
   return(
     <div>
       Message Board
+      <PostCard />
+      <PostForm />
     </div>
   )
 }
