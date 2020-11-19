@@ -1,10 +1,26 @@
 import React from 'react'
 
-const About = () => {
+const About = ({logged_in}) => {
 
   return(
     <div>
-      About
+     { !logged_in ?
+        (
+        <div>
+            <p>
+              Fake About
+            </p>
+        </div>
+      
+      ) : (
+        <div>
+          <p>
+            Real About
+          </p>
+        </div>
+      )
+     }
+
     </div>
   )
 }

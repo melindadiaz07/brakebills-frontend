@@ -1,11 +1,27 @@
 import React from 'react';
 import FacultyCard from './FacultyCard'
 
-const Faculty = () => {
+const Faculty = ({logged_in}) => {
 
   return(
     <div>
-      Faculty
+     { !logged_in ?
+        (
+        <div>
+            <p>
+              Fake Faculty
+            </p>
+        </div>
+      
+      ) : (
+        <div>
+          <p>
+            Real Faculty
+          </p>
+        </div>
+      )
+     }
+
     </div>
   )
 }

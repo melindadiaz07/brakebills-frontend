@@ -1,11 +1,27 @@
 import React from 'react'
 import AdmissionsForm from './AdmissionsForm'
 
-const Admissions = () => {
+const Admissions = ({logged_in}) => {
 
   return(
     <div>
-      Admissions
+     { !logged_in ?
+        (
+        <div>
+            <p>
+              Fake Admissions
+            </p>
+        </div>
+      
+      ) : (
+        <div>
+          <p>
+            Real Admissions
+          </p>
+        </div>
+      )
+     }
+
     </div>
   )
 }

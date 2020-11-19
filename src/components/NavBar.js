@@ -1,14 +1,19 @@
 
 import React, { Fragment } from "react";
 import { Menu } from "semantic-ui-react";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink, withRouter, Redirect } from "react-router-dom";
 
-const NavBar = ({logged_in, getCurrentUser, logOut, location: { pathname } }) => {
+
+const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname } }) => {
 
   // let logout = () => {
   //   localStorage.clear()
   //   getCurrentUser(null)
   // };
+
+  let redirectHome = () => {
+    <Redirect push to='/home' />
+  }
 
 
   return (
@@ -46,12 +51,16 @@ const NavBar = ({logged_in, getCurrentUser, logOut, location: { pathname } }) =>
           active={pathname === "/faculty"}
         />
         <Menu.Menu position="right">
-        <Menu.Item
+        <Menu.Item to="/login" name="Login" onClick={() => {
+            logIn()
+              }
+            } />
+        {/* <Menu.Item
           as={NavLink}
           to="/login"
           name="Login"
           active={pathname === "/login"}
-        />
+        /> */}
         </Menu.Menu>
       </Fragment>
     ) : (
@@ -77,7 +86,7 @@ const NavBar = ({logged_in, getCurrentUser, logOut, location: { pathname } }) =>
          <Menu.Item
           as={NavLink}
           to="/academics"
-          name="Adacemics"
+          name="Academics"
           active={pathname === "/academics"}
         />
         <Menu.Item
@@ -95,6 +104,7 @@ const NavBar = ({logged_in, getCurrentUser, logOut, location: { pathname } }) =>
         />
           <Menu.Item to="/logout" name="Logout" onClick={() => {
             logOut()
+            redirectHome()
             // logout()
               }
             } />

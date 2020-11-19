@@ -14,55 +14,56 @@ import React, { useState } from 'react'
 
 function App() {
 
-  const [logged_in, setLogged_in] = useState(true)
+  const [logged_in, setLogged_in] = useState(false)
 
   let logOut = () => {
     setLogged_in(false)
   }
 
+  let logIn = () => {
+    setLogged_in(true)
+  }
+
   return (
     <div className="App">
     
-    <NavBar logged_in={logged_in} logOut={logOut} />
+    <NavBar logged_in={logged_in} logOut={logOut} logIn={logIn} />
 
     <Switch>
 
       <Route exact path="/" render={() => <Redirect to="/home" />} />
 
       <Route exact path='/home' render={()=> {
-        return <Home />
+        return <Home logged_in={logged_in}/>
       }} />
 
       <Route exact path='/about' render={()=> {
-        return <About />
+        return <About logged_in={logged_in}/>
       }} />
 
       <Route exact path='/admissions' render={()=> {
-        return <Admissions />
+        return <Admissions logged_in={logged_in}/>
       }} />
 
       <Route exact path='/academics' render={()=> {
-        return <Departments />
+        return <Departments logged_in={logged_in}/>
       }} />
 
       <Route exact path='/faculty' render={()=> {
-        return <Faculty />
+        return <Faculty logged_in={logged_in}/>
       }} />
 
       
       <Route exact path='/login' render={()=> {
-        return <Login />
+        return <Login logged_in={logged_in}/>
       }} />
 
       <Route exact path='/messageboard' render={()=> {
-        return <MessageBoard />
+        return <MessageBoard logged_in={logged_in}/>
       }} />
 
 
-
-
     </Switch>
-    
 
     </div>
   );
