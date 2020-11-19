@@ -1,22 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 const Home = ({logged_in}) => {
 
+
   return(
-<div>
+<div className="home-page-container">
      { !logged_in ?
         (
-        <div>
-            <p>
-              Fake Home
-            </p>
+        <div className="home-page-vid-container" >
+           
         </div>
       
       ) : (
-        <div>
-          <p>
-            Real Home
-          </p>
+        <div className="home-page-vid-container">
         </div>
       )
      }
