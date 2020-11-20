@@ -1,12 +1,13 @@
 import React from 'react';
-import ReplyForm from './ReplyForm'
 
-const ReplyCard = () => {
+
+const ReplyCard = (props) => {
 
   return(
-    <dvi>
-      <ReplyForm />
-    </dvi>
+    <div className="reply-card" >
+      <p>{props.reply.replier}</p>
+      <p>{props.reply.content}</p>
+    </div>
   )
 }
 export default ReplyCard;

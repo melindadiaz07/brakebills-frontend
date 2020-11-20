@@ -1,7 +1,7 @@
 
 import React, { Fragment } from "react";
 import { Menu } from "semantic-ui-react";
-import { NavLink, withRouter, Redirect } from "react-router-dom";
+import { NavLink, withRouter, Redirect, Switch, useHistory } from "react-router-dom";
 
 
 const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname } }) => {
@@ -11,8 +11,10 @@ const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname 
   //   getCurrentUser(null)
   // };
 
+  const history = useHistory()
+
   let redirectHome = () => {
-    <Redirect push to='/home' />
+      history.push('/home')
   }
 
 
