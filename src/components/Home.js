@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import video from '../images/classroomshot.mp4'
+
 
 
 const Home = ({logged_in}) => {
@@ -9,7 +11,7 @@ const Home = ({logged_in}) => {
      { !logged_in ?
         (
         <div className="home-page-vid-container" >
-           
+            <video loop autoPlay src={video} type="video/mp4" width="100%"/>
         </div>
       
       ) : (

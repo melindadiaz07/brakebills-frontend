@@ -7,6 +7,7 @@ const PostForm = (props) => {
 
   const [postContent, setPostContent] = useState("")
   const [category, setCategory] = useState("Misc")
+  const [title, setTitle] = useState("")
   
   const updatePostContent = (event) => {
     event.preventDefault()
@@ -18,16 +19,23 @@ const PostForm = (props) => {
     setCategory(event.target.value)
   }
 
+  const updateTitle = (event) => {
+    event.preventDefault()
+    setTitle(event.target.value)
+  }
+
   const clearForm = () => {
     setPostContent("")
+    setTitle("")
   }
 
   return(
     <div>
       <form className="post-form" onSubmit={(event)=> {
-        props.handleSubmit(event, category, postContent)
+        props.handleSubmit(event, title, category, postContent)
         clearForm()
         }} >
+        <input onChange={(event) => updateTitle(event)} placeholder="Title" value={title} />
         <textarea  onChange={(event) => updatePostContent(event)} placeholder="Post Content" value={postContent} resize="none" />
       <div className="post-form-dropdown">
         <label>Category </label><br />

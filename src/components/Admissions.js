@@ -8,15 +8,16 @@ const Admissions = ({logged_in}) => {
      { !logged_in ?
         (
         <div>
-            <p>
-              Fake Admissions
-            </p>
+             <AdmissionsForm />
         </div>
       
       ) : (
         <div>
           <p>
-            Real Admissions
+            We're so delighted to have you at Brakebills. If you would like to apply to a new Area of study, please fill out the form below.
+          </p>
+          <p>
+          If you would like to apply to a new Area of study, please fill out the form below.
           </p>
         </div>
       )

@@ -11,10 +11,17 @@ const ReplyForm = (props) => {
     setReply(event.target.value)
   }
 
+  let clearForm = () => {
+    setReply("")
+  }
+
 
   return(
     <div >
-      <form  onSubmit={(event) => props.handleSubmit(event, reply)} className="reply-form">
+      <form  onSubmit={(event) => {
+        props.handleSubmit(event, reply)
+        clearForm()
+        }} className="reply-form">
       <textarea onChange={(event) => updateReplyContent(event)} className="reply-form-textarea" placeholder="Reply..." value={reply} />
       <button className="reply-submit-btn" type="submit" >Submit</button>
       </form>
