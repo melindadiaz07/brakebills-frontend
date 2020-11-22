@@ -14,7 +14,7 @@ const Admissions = ({logged_in}) => {
       ) : (
         <div>
           <p>
-            We're so delighted to have you at Brakebills. If you would like to apply to a new Area of study, please fill out the form below.
+            We're so delighted to have you at Brakebills. 
           </p>
           <p>
           If you would like to apply to a new Area of study, please fill out the form below.

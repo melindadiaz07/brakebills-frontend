@@ -30,9 +30,14 @@ let updateEmail = (event) => {
           <Form.Input onChange={updateEmail} fluid label='Email' value={email} placeholder='Email address' />
        </Form.Group>
        <Form.Button content='Submit' />
+       
        </Form>
     </div>
   )
 }
 
 export default AdmissionsForm
+
+// add form components with questions about history, math, 
+// and science that will flicker for a literal second or two 
+// to be a slightly different question
