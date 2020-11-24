@@ -36,16 +36,20 @@ render() {
       
     ) : (
 
+      <div>
       <div className="department-info-container">
+   
         <h2>{this.props.dept.real_name}</h2>
         <h3>{this.props.dept.real_description}</h3>
         <p onClick={() => this.showAreaOfStudy()}><em>See areas of study </em> ▽ </p>
+        </div>
+        <div>
         { !this.state.areaOfStudyShown ? null : 
           <div className="area-of-study-card">
             <AreasOfStudy department={this.props.dept} />
           </div>
         }
-      </div>) 
+        </div></div>) 
 
     }
     </div>

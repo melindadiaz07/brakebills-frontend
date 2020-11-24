@@ -36,20 +36,31 @@ body {
   max-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+  background-attachment: fixed
+
 }
 
 .home-page-container h2{
   /* z-index: 1; */
   color: white;
   position: absolute;
-  padding-top: 35vh;
-  margin-left: 35vw;
+  top: 35vh;
+  padding: 20px 30px;
+  margin-left: 25vw;
   font-size: 3rem;
-  
- 
-
+  font-style: italic;
+  background-color: rgba(255,255,255,0.2);
+  /* border-radius: 5px; */
 }
- 
+
+.home-page-container h3 {
+  background-color: rgba(255,255,255,0.2);
+  position: absolute;
+  bottom: 0px;
+}
+
+
 .ui.pointing.secondary.menu{
   background-color: rgb(10, 10, 10);
   height: 10vh !important;
@@ -222,6 +233,9 @@ body {
   margin-left: 15vw;
   text-align: left;
   margin-top: 15vh;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.3)
+  
 }
 
 .faculty-container{
@@ -235,11 +249,6 @@ body {
   color: black;
 }
 
-.area-of-study-card{
-  border-style: solid;
-  width: 60vw;
-  margin-left: 10vw;
-}
 
 .faculty-image{
   width: 200px;
@@ -265,10 +274,12 @@ body {
 .department-info-container{
   text-align: left;
   width: 60vw;
-  margin: 5vh 10vw;
-  border-style: solid;
+  margin: 0vh 10vw;
+  margin-top: 10vh;
   padding: 25px;
   position:relative;
+  background-color: rgba(255,255,255,0.6);
+  color: black;
 }
 
 .department-info-container h2 {
@@ -286,10 +297,19 @@ body {
 }
 
 .department-info-container p {
-  
   position: absolute;
   right: 5px;
   bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.area-of-study-card{
+  /* border-style: solid; */
+  width: 60vw;
+  margin-left: 10vw;
+  background-color: rgba(255,255,255,0.6);
+  border-top-style: solid;
+  color: black;
 }
 
 
