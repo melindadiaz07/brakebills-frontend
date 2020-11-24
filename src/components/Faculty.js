@@ -1,22 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FacultyCard from './FacultyCard'
 
 const Faculty = ({logged_in}) => {
 
+  const [faculty, setFaculty] = useState([])
+
+  const getFaculty = () => {
+    fetch("http://localhost:3000/faculties")
+    .then(res => res.json())
+    .then(facultyList => {
+      console.log(facultyList[0])
+      setFaculty(facultyList)
+    })
+  }
+
+  useEffect(getFaculty, [])
+
   return(
-    <div>
+    <div className="faculty-page" >
      { !logged_in ?
         (
         <div>
+          <div className="faculty-header">
+          <em>Our outstanding faculty...</em>
+        </div>
             <p>
-              Fake Faculty
+              { !faculty ? null : faculty.map(person => {
+                return <FacultyCard faculty={person} logged_in={logged_in} />
+              })}
             </p>
         </div>
       
       ) : (
-        <div>
+        <div className="faculty-page">
+          <div className="faculty-header">
+          <em>Our spellcasting faculty...</em>
+        </div>
           <p>
-            Real Faculty
+          { !faculty ? null : faculty.map(person => {
+                return <FacultyCard faculty={person} logged_in={logged_in} />
+              })}
           </p>
         </div>
       )

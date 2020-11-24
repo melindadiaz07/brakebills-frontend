@@ -1,5 +1,16 @@
+body {
+  color: white;
+  background: url(./images/moscow_id_0.jpg) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-header {
@@ -14,14 +25,40 @@
 }
 
 
+.ui.secondary.menu .item {
+  color: rgb(238, 236, 236) !important
+}
+
+
 .home-page-vid-container {
   /* background-image: url(./images/classroomshot.mov); */
   width: 100vw;
   max-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: contain; */
+}
 
+.home-page-container h2{
+  /* z-index: 1; */
+  color: white;
+  position: absolute;
+  padding-top: 35vh;
+  margin-left: 35vw;
+  font-size: 3rem;
+  
+ 
+
+}
+ 
+.ui.pointing.secondary.menu{
+  background-color: rgb(10, 10, 10);
+  height: 10vh !important;
+  margin-bottom: 0px;
+
+}
+
+.about-page-container{
+  margin-top: 25vh;
 }
 
 .message-board-container{
@@ -35,12 +72,8 @@
   margin-top: -40px;
 }
 
-.filter-category{
- 
-}
-
 .posts-container {
-  border-style: solid;
+  /* border-style: solid; */
   height: 70vh;
   width: 60vw;
   margin-right: 5px;
@@ -49,11 +82,12 @@
   margin-left: 10vw;
   text-align: left;
   border-radius: 7px;
+  background-color: rgba(255,255,255,0.5);
+  color: black;
 }
 
-
 .post-form-container{
-  border-style: solid;
+  /* border-style: solid; */
   bottom: 0;
   width: 60vw;
   min-height: 15vh;
@@ -62,6 +96,7 @@
   margin-left: 10vw;
   margin-top: 5px;
   border-radius: 5px;
+  background-color: rgba(255,255,255,0.8);
 }
 
 .post-form{
@@ -80,6 +115,8 @@
   border-radius: 5px;
   position: relative;
   top: 20px;
+  background-color: rgba(255,255,255,0.5);
+  color: black;
 }
 
 .post-form input{
@@ -87,6 +124,7 @@
   position: absolute;
   margin: 5px;
   border-radius: 3px;
+  color: black;
 }
 
 .post-form-dropdown {
@@ -102,44 +140,46 @@
   right: 0px;
   border-radius: 5px;
   border-style: none;
-  padding: 7px;
-  
+  padding: 7px; 
 }
 
 .replies-container {
-  border-style: solid;
-  display: inline-block;
+  /* border-style: solid; */
+  /* display: inline-block; */
   height: 70vh;
   width: 23vw;
   float: left; 
   position: relative;
   border-radius: 5px;
-  
+  background-color: rgba(255,255,255,0.5);
+  color: black;
 }
 
 .replies-box-header{
   top: -10px;
   position: absolute;
+  color: black;
   right: 12px;
-  background-color: white;
+  /* background-color: white; */
   padding: 0 7px;
-  color: grey;
+  /* color: grey; */
 }
 
 .single-post-container{
   padding: 10px;
   margin: 20px 10px;
-  border-style: solid;
+  /* border-style: solid; */
   border-color: rgb(228, 228, 226);
   border-radius: 5px;
   border-radius: 5px;
+  background-color: rgba(255,255,255,0.7);
 }
 
 .replies-list-container{
   height: 60vh;
   padding-top: 20px;
   overflow-y: scroll;
-  border-bottom-style: solid;
+  /* border-bottom-style: solid; */
   border-color: rgb(223, 222, 222);
   border-radius: 5px;
 
@@ -149,15 +189,17 @@
   text-align: left;
   margin: 15px 5px;
   padding: 10px;
-  border-style: solid;
+  /* border-style: solid; */
   border-color: rgb(218, 218, 217);
   border-radius: 5px;
+  background-color: rgba(255,255,255,0.7)
 }
 
 .reply-form-container{
  position: absolute;
  bottom: 0;
  border-radius: 5px;
+ background-color: rgba(255,255,255,0.5);
 }
 
 .reply-form-textarea{
@@ -175,7 +217,80 @@
 }
 
 
-.form-container{
-  width: 70vw;
+.admissions-form-container{
+  width: 65vw;
   margin-left: 15vw;
+  text-align: left;
+  margin-top: 15vh;
 }
+
+.faculty-container{
+  margin-left: 10vw;
+  width: 60vw;
+  /* border-style: solid; */
+  overflow: auto;
+  margin-top: 70px;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  color: black;
+}
+
+.area-of-study-card{
+  border-style: solid;
+  width: 60vw;
+  margin-left: 10vw;
+}
+
+.faculty-image{
+  width: 200px;
+  display: block;
+  float: left;
+  margin: 20px;
+}
+
+
+.faculty-info-container{
+  text-align: left;
+  width: 30vw;
+  /* border-style: solid; */
+  margin-left: 50px;
+  float: left; 
+  margin-top: 50px;
+}
+
+.faculty-page{
+  margin-bottom: 50px;
+}
+
+.department-info-container{
+  text-align: left;
+  width: 60vw;
+  margin: 5vh 10vw;
+  border-style: solid;
+  padding: 25px;
+  position:relative;
+}
+
+.department-info-container h2 {
+  display: inline-block;
+}
+
+.department-info-container h3 {
+  display: inline-block;
+  margin-left: 20vw;
+}
+
+.department-info-container h3 {
+  display: inline-block;
+  margin-left: 20vw;
+}
+
+.department-info-container p {
+  
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+
+

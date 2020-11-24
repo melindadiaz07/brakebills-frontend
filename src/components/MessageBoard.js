@@ -124,11 +124,11 @@ const MessageBoard = () => {
         }
         <div ref={repliesEnd} className="bottom-of-replies" />
         </div>
-
+        { !selectedPost ? null : 
         <div className="reply-form-container">
-          <ReplyForm handleSubmit={handleReplySubmit}/>
-          </div>
-      </div>
+          <ReplyForm handleSubmit={handleReplySubmit} replyTo={selectedPost.user.username} />
+        </div> }
+      </div> 
 
       <div className="post-form-container">
          <PostForm handleSubmit={handlePostSubmit}/>

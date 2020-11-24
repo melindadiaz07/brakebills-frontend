@@ -22,7 +22,7 @@ const ReplyForm = (props) => {
         props.handleSubmit(event, reply)
         clearForm()
         }} className="reply-form">
-      <textarea onChange={(event) => updateReplyContent(event)} className="reply-form-textarea" placeholder="Reply..." value={reply} />
+      <textarea onChange={(event) => updateReplyContent(event)} className="reply-form-textarea" placeholder={`Reply to ${props.replyTo}...`} value={reply} />
       <button className="reply-submit-btn" type="submit" >Submit</button>
       </form>
     </div>

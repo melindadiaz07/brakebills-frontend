@@ -1,29 +1,56 @@
-import React from 'react';
+import { Component } from 'react';
+import AreasOfStudy from './AreasOfStudy'
 
-const DepartmentCard = (props) => {
+class DepartmentCard extends Component {
 
+  state = {
+    areaOfStudyShown: false
+  }
+
+showAreaOfStudy = () => {
+  this.setState({
+    areaOfStudyShown: !this.state.areaOfStudyShown
+  })
+}
+
+render() {
 
   return(
-    <div>
-      {  !props.logged_in ?
-      
-      (<div>
-        <p>{props.dept.fake_name}</p>
-        <p>{props.dept.fake_description}</p>
-        <br />
-      </div>
+    <div className="dept-container">
 
+      {  !this.props.logged_in ?
+      (<div>
+      <div className="department-info-container">
+   
+        <h2>{this.props.dept.fake_name}</h2>
+        <h3>{this.props.dept.fake_description}</h3>
+        <p onClick={() => this.showAreaOfStudy()}><em>See areas of study </em> ▽ </p>
+        </div>
+        <div>
+        { !this.state.areaOfStudyShown ? null : 
+          <div className="area-of-study-card">
+            <AreasOfStudy department={this.props.dept} />
+          </div>
+        }
+        </div></div>
+      
     ) : (
 
-      <div><p>{props.dept.real_name}</p>
-        <p>{props.dept.real_description}</p>
-        <br />
+      <div className="department-info-container">
+        <h2>{this.props.dept.real_name}</h2>
+        <h3>{this.props.dept.real_description}</h3>
+        <p onClick={() => this.showAreaOfStudy()}><em>See areas of study </em> ▽ </p>
+        { !this.state.areaOfStudyShown ? null : 
+          <div className="area-of-study-card">
+            <AreasOfStudy department={this.props.dept} />
+          </div>
+        }
       </div>) 
 
     }
-
     </div>
-  )
+    )
+  }
 }
 
 export default DepartmentCard;

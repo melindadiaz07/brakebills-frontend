@@ -1,10 +1,13 @@
 import React from 'react';
+import AreaOfStudyCard from './AreaOfStudyCard'
 
-const AreasOfStudy = () => {
+const AreasOfStudy = (props) => {
 
   return(
     <div>
-      Areas of Study
+      { props.department.area_of_studies.map(area => {
+         return <AreaOfStudyCard areaData={area} />
+      })}
     </div>
   )
 }
