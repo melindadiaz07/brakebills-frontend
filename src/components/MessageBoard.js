@@ -24,7 +24,6 @@ const MessageBoard = () => {
     }
   }
 
-
   let getPosts = () => {
     fetch("http://localhost:3000/posts")
     .then(res => res.json())
@@ -33,8 +32,8 @@ const MessageBoard = () => {
       setFilteredPosts(postsData)
       scrollToBottomPosts()
     })
-    
   }
+
   useEffect(getPosts, [])
 
   let scrollToBottomPosts = () => {
@@ -51,10 +50,11 @@ const MessageBoard = () => {
     fetch("http://localhost:3000/posts", {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({title: title, category: category, content: content, user_id: 8})
+      body: JSON.stringify({title: title, category: category, content: content, user_id: 26})
     })
     .then(res => res.json())
-    getPosts()
+    .then(post => getPosts())
+    // getPosts()
     scrollToBottomPosts()
   }
 
@@ -85,7 +85,6 @@ const MessageBoard = () => {
     let filteredPosts = posts.filter(post => post.category === filter)
     setFilteredPosts(filteredPosts)
     }
-    
   }
 
 
