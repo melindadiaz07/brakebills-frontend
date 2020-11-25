@@ -7,7 +7,6 @@ const Home = ({logged_in}) => {
 
 
 
-
 return(
   <div className="home-page-container">
      { !logged_in ?
@@ -18,10 +17,7 @@ return(
             <h3>Announcements: </h3>
           <video autoPlay loop muted src={video} type="video/mp4" width="100%"/>
             
-         
         </div>
-
-       
 
       </div>
       ) : (
@@ -29,7 +25,7 @@ return(
         <div className="home-page-vid-container" >
             <video loop autoPlay src={video} type="video/mp4" width="100%"/>
         </div>
-        <h2>Brakebills University of magical Pedogogy</h2>
+        <h2>Brakebills University of Magical Pedogogy</h2>
         </div>
       )
      }

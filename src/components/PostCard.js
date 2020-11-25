@@ -11,7 +11,7 @@ const PostCard = (props) => {
 
 
   return(
-    <div className="single-post-container" onClick={() => props.handleClick(props.post)}>
+    <div className="single-post-container" id={`${props.post.id}`} onClick={(event) => props.handleClick(event, props.post)}>
       <b>{username}</b>
       <p>Title: {title}</p>
       <p>Category: {category}</p>

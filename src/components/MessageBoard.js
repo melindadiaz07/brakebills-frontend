@@ -16,12 +16,18 @@ const MessageBoard = () => {
   const messagesEnd = useRef()
   const repliesEnd = useRef()
 
-  const handleClick = (post) => {
+  const handleClick = (event, post) => {
+    if (selectedPost !== null) {
+      let previousEl = document.getElementById(selectedPost.id)
+      previousEl.className="single-post-container" 
+    }
+
     setSelectedPost(post)
+    event.currentTarget.className="single-post-selected"
     if (post.replies !== null) {
       setRenderedReplies(post.replies)
       scrollToBottomReplies()
-    }
+    } 
   }
 
   let getPosts = () => {
@@ -35,7 +41,6 @@ const MessageBoard = () => {
   }
 
   useEffect(getPosts, [])
-
   let scrollToBottomPosts = () => {
     messagesEnd.current.scrollIntoView({ behavior: "smooth" });
   }
@@ -89,8 +94,7 @@ const MessageBoard = () => {
 
 
   return(
-    <div>
-      <h3>Message Board</h3>
+    <div className="message-board-page">
 
       <div className="filter-div"> 
       <label>Category: </label><br />

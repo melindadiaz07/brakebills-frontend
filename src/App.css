@@ -56,19 +56,30 @@ body {
 
 .home-page-container h3 {
   background-color: rgba(255,255,255,0.2);
-  position: absolute;
+  position: fixed;
   bottom: 0px;
+  margin: 0px;
+  height: 10vh;
+  padding-top: 3vh;
+  width: 100vw;
+  font-style: italic;
 }
 
 
 .ui.pointing.secondary.menu{
   background-color: rgb(10, 10, 10);
-  height: 10vh !important;
+  height: 8vh !important;
   margin-bottom: 0px;
   /* position: fixed !important;
   display: flex; */
   top: 0;
+}
 
+#nav-container{
+  position: sticky !important;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
 }
 
 .about-page-container{
@@ -80,10 +91,20 @@ body {
   height: 85vh;
 }
 
+.message-board-page{
+  padding-top: 5vh;
+}
+
 .filter-div{
   margin: 10px;
   text-align:left;
-  margin-top: -40px;
+  margin-top: -30px;
+  position: fixed;
+}
+
+.filter-div label {
+  font-size: 1.2rem;
+  color: black;
 }
 
 .posts-container {
@@ -187,6 +208,16 @@ body {
   border-radius: 5px;
   border-radius: 5px;
   background-color: rgba(255,255,255,0.7);
+}
+
+.single-post-selected{
+  padding: 10px;
+  margin: 20px 10px;
+  /* border-style: solid; */
+  border-color: rgb(228, 228, 226);
+  border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgba(105, 104, 104, 0.7);
 }
 
 .replies-list-container{

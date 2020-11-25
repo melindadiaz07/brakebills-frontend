@@ -27,7 +27,9 @@ function App() {
   return (
     <div className="App">
     
+    <div id="nav-container">
     <NavBar logged_in={logged_in} logOut={logOut} logIn={logIn} />
+    </div>
 
     <Switch>
 
