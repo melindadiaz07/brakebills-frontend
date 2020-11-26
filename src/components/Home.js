@@ -26,6 +26,7 @@ return(
             <video loop autoPlay src={video} type="video/mp4" width="100%"/>
         </div>
         <h2>Brakebills University of Magical Pedogogy</h2>
+        <h3>Announcements: </h3>
         </div>
       )
      }
