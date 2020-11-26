@@ -30,6 +30,14 @@ body {
   
 }
 
+.home-page-header h2 {
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url(https://image.shutterstock.com/image-photo/gold-260nw-663009955.jpg) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 .home-page-vid-container {
   width: 100vw;
@@ -67,7 +75,7 @@ body {
 
 
 .ui.pointing.secondary.menu{
-  background-color: rgb(12, 34, 15);
+  background-color: rgb(5, 7, 5);
   height: 8vh !important;
   margin-bottom: 0px;
   /* position: fixed !important;

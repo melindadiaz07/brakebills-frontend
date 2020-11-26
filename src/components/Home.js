@@ -13,7 +13,8 @@ return(
         (<div>
         <div className="home-page-vid-container" >
          
-            <h2>Brakebills University of Arts and Sciences</h2>
+          <div className="home-page-header">
+            <h2>Brakebills University of Arts and Sciences</h2></div>
             <h3>Announcements: </h3>
           <video autoPlay loop muted src={video} type="video/mp4" width="100%"/>
             
