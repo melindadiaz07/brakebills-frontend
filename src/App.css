@@ -1,6 +1,7 @@
 body {
   color: rgb(13, 36, 16);
-  background: url(./images/moscow_id_0.jpg) !important;
+  /* background: url(./images/moscow_id_0.jpg) !important; */
+  background-color: rgb(46, 45, 45) !important;
   background-attachment: fixed !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -26,7 +27,11 @@ body {
 
 
 .ui.secondary.menu .item {
-  color: rgb(238, 236, 236) !important;
+  color: rgb(238, 236, 236) !important;  /* Fallback: assume this color ON TOP of image */
+  background: url(https://images.creativemarket.com/0.1.0/ps/3117791/300/200/m2/fpc/wm0/oi1o929rioedbm29r6eygrne3onlsvxewbjmvrds3ddquy7jkj2svhi2fbcgeiyi-.jpg?1502725711&s=cf42cc77b82d8850fc8fa96d57f666a1) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .home-page-header h2 {
@@ -37,6 +42,16 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.nav-logo img{
+  max-height: 8vh;
+  position: absolute;
+  top: 5px;;
+  left: 48vw;
+}
+
+.ui.secondary.pointing.menu .active.item {
+  border-color: rgb(138, 123, 58) !important;
+}
 
 .home-page-vid-container {
   width: 100vw;
@@ -46,8 +61,8 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   background-attachment: fixed
-
 }
+
 
 .home-page-container h2{
   color: white;
@@ -76,9 +91,16 @@ body {
 .ui.pointing.secondary.menu{
   background-color: rgb(5, 7, 5);
   background: url(./images/blacktexture.jpg);
-  height: 8vh !important;
+  height: 10vh !important;
   margin-bottom: 0px;
   top: 0;
+}
+
+.ui.secondary.pointing.menu{
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: rgb(121, 111, 56) !important;
+ 
 }
 
 #nav-container{
@@ -193,8 +215,6 @@ body {
 }
 
 .replies-container {
-  /* border-style: solid; */
-  /* display: inline-block; */
   height: 70vh;
   width: 23vw;
   float: left; 

@@ -2,6 +2,7 @@
 import React, { Fragment } from "react";
 import { Menu } from "semantic-ui-react";
 import { NavLink, withRouter, Redirect, Switch, useHistory } from "react-router-dom";
+import logo from '../images/goldlogo2.png'
 
 
 const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname } }) => {
@@ -19,9 +20,13 @@ const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname 
 
 
   return (
+    <div>
+      
     <Menu pointing secondary>
+    <div className="nav-logo"><img src={logo} /></div>
     {!logged_in ? (
       <Fragment>
+        
         <Menu.Item
             as={NavLink}
             to="/home"
@@ -63,7 +68,9 @@ const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname 
           name="Login"
           active={pathname === "/login"}
         /> */}
+        
         </Menu.Menu>
+        
       </Fragment>
     ) : (
     <Fragment>
@@ -113,7 +120,7 @@ const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname 
         </Menu.Menu>
     </Fragment>
     )}
-  </Menu>
+  </Menu></div>
   )
 }
 
