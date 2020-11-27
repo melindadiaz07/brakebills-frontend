@@ -12,10 +12,10 @@ return(
      { !logged_in ?
         (<div>
         <div className="home-page-vid-container" >
-         
+         <div className="header-background" ></div>
           <div className="home-page-header">
-            <h2>Brakebills University of Arts and Sciences</h2></div>
-            <h3>Announcements: </h3>
+            <h2>Brakebills University <br></br><span className="header-span">of Arts and Sciences</span></h2></div>
+            <div className="announcements-container"><h3>Announcements:  Brakebills campus will be closed until March 3rd for repair of a gas leak.</h3></div>
           <video autoPlay loop muted src={video} type="video/mp4" width="100%"/>
             
         </div>
