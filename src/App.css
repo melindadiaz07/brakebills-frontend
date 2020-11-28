@@ -60,7 +60,10 @@ body {
 }
 
 .ui.secondary.pointing.menu .active.item {
-  border-color: rgb(138, 123, 58) !important;
+  /* border-color: rgb(138, 123, 58) !important; */
+  border-image: url(./images/bestgoldleaf.jpg) 10 10 !important;
+  border-bottom-width: 3px !important;
+  border-bottom-style: solid !important;
 }
 
 .home-page-vid-container {
@@ -130,9 +133,9 @@ body {
 }
 
 .ui.secondary.pointing.menu{
+  border-image: url(./images/bestgoldleaf.jpg) 10 10 !important;
   border-bottom-width: 1px !important;
   border-bottom-style: solid !important;
-  border-bottom-color: rgb(121, 111, 56) !important;
  
 }
 
@@ -321,6 +324,7 @@ select.filter-category{
   margin: 20px 10px;
   border-color: rgb(228, 228, 226);
   background-color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
 }
 
 .single-post-selected{
@@ -330,7 +334,7 @@ select.filter-category{
   border-image: url(./images/bestgoldleaf.jpg) 4 4;
   border-top: solid 2px;
   border-bottom: solid 2px;
-  
+  font-size: 1.1rem;
   /* background-color:rgba(190, 185, 185, 0.7); */
   
   color: white;
