@@ -309,7 +309,7 @@ select.filter-category{
   position: absolute;
   right: 12px;
   padding: 0 7px;
-  color: white;  /* Fallback: assume this color ON TOP of image */
+  color: white; 
   background: url(./images/bestgoldleaf.jpg) ;
   background-clip: text;
   -webkit-background-clip: text;
@@ -443,48 +443,83 @@ select.filter-category{
   margin-bottom: 50px;
 }
 
+.dept-container{
+  margin-bottom: 20vh;
+}
+
 .department-info-container{
   text-align: left;
-  width: 60vw;
+  width: 70vw;
   margin: 0vh 10vw;
   margin-top: 10vh;
   padding: 25px;
   position:relative;
   background-color: rgba(255,255,255,0.6);
-  color: black;
+  color: white;
+  /* margin-bottom: 20vh; */
+
 }
 
 .department-info-container h2 {
-  display: inline-block;
+  display: inline;
+  position: absolute;
+  top: 35%;
+  width: 15vw;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .department-info-container h3 {
+  position: relative;
+  top: -15px;
   display: inline-block;
   margin-left: 20vw;
+  padding-left: 3vw;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  border-left: solid 2px;
+  border-image: url(./images/bestgoldleaf.jpg) 4 4;
 }
 
-.department-info-container h3 {
-  display: inline-block;
-  margin-left: 20vw;
-}
+
 
 .department-info-container p {
   position: absolute;
   right: 5px;
   bottom: 5px;
   font-size: 1.2rem;
+  cursor: pointer;
+  color: rgb(19, 56, 19);
 }
 
 .area-of-study-card{
   /* border-style: solid; */
-  width: 60vw;
+  width: 70vw;
   margin-left: 10vw;
   background-color: rgba(255,255,255,0.6);
-  border-top-style: solid;
-  color: black;
+  border-top: solid 1px;
+  border-color: rgb(17, 61, 15);
+  color: white;
+  position: relative;
+  padding: 7vh 10vw;
+  text-align: left;
+  
 }
 
-.henryfog-photo{
+
+.single-aos{
+  margin-bottom: 7vh;
+  font-size: 1.1rem
+}
+
+.aos-name{
+  font-weight: bold;
+  font-size: 1.4rem
+}
+
+.henryfogg-photo{
   background: url(./images/henryfog.jpg);
   background-size: cover;
 }

@@ -55,7 +55,7 @@ const MessageBoard = () => {
     fetch("http://localhost:3000/posts", {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({title: title, category: category, content: content, user_id: 26})
+      body: JSON.stringify({title: title, category: category, content: content, user_id: 35})
     })
     .then(res => res.json())
     .then(post => getPosts())

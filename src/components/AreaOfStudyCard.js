@@ -8,13 +8,13 @@ const AreaOfStudyCard = (props) => {
     <div >
     { !props.logged_in ?
        (
-        <div >
-          <p>{props.areaData.fake_name}</p>
+        <div className="single-aos">
+          <p className="aos-name">{props.areaData.fake_name}</p>
           <p>{props.areaData.fake_description}</p>
         </div>
      ) : (
-      <div >
-          <p>{props.areaData.real_name}</p>
+      <div className="single-aos">
+          <p className="aos-name">{props.areaData.real_name}</p>
           <p>{props.areaData.real_description}</p>
         </div>
      )
