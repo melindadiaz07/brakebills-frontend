@@ -16,6 +16,7 @@ const PostCard = (props) => {
       <p>Title: {title}</p>
       <p>Category: {category}</p>
       <p>{content}</p>
+      <div className="reply-button"> reply ▸ </div>
     </div>
   )
 }

@@ -1,6 +1,14 @@
+/* font-family: 'Cinzel', serif;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Forum', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Prata', serif; */
+
+
+
 body {
   color: rgb(13, 36, 16);
-  /* background: url(./images/moscow_id_0.jpg) !important; */
+  background: url(./images/ivybackground1.jpg) !important;
   background-color: rgb(46, 45, 45) !important;
   background-attachment: fixed !important;
   background-size: cover !important;
@@ -41,6 +49,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 500;
 }
 
 .nav-logo img{
@@ -105,7 +114,7 @@ body {
   font-style: italic;
   font-weight: 300;
   letter-spacing: 2px;
-  font-family: serif;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
   color: rgb(235, 193, 103);
   text-shadow: 1px 1px rgb(56, 50, 39);
   font-size: 3.2vh;
@@ -127,6 +136,7 @@ body {
  
 }
 
+
 #nav-container{
   position: sticky !important;
   width: 100vw;
@@ -136,15 +146,54 @@ body {
 
 .about-page-container{
   margin-top: 10vh;
-  width: 70vw;
+  width: 65vw;
   text-align: left;
-  margin-left: 15vw;
-  background-color: rgba(255,255,255,0.5);
-  padding: 30px;
-  color: black;
-  font-size: 1.2rem;
+  margin-left: 17vw;
+  background-color: rgba(253, 245, 245, 0.2);
+  padding: 60px;
+  color: rgb(219, 218, 213);
+  font-size: 1.4rem;
   margin-bottom: 10vh;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 1px;
+  
 }
+
+.about-page-container hr{
+  background-image: url(./images/bestgoldleaf.jpg);
+  background-position: center center;
+  height: 2px;
+  border-style: hidden;
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.about-page-container h2{
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 300;
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url(./images/bestgoldleaf.jpg) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.about-page-quote p{
+  font-style: italic;
+  width: 510px;
+  margin-left: 10vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-page-container p{
+  margin-bottom: 30px;
+}
+
+
 
 .message-board-container{
   margin-bottom: 20px;
@@ -164,11 +213,14 @@ body {
 
 .filter-div label {
   font-size: 1.2rem;
-  color: black;
+  color:  rgb(143, 131, 70) !important 
+  
 }
 
+select.filter-category{
+  margin-top: 15px;
+}
 .posts-container {
-  /* border-style: solid; */
   height: 70vh;
   width: 60vw;
   margin-right: 5px;
@@ -190,7 +242,7 @@ body {
   float: left;
   margin-left: 10vw;
   margin-top: 5px;
-  border-radius: 5px;
+  
   background-color: rgba(255,255,255,0.8);
 }
 
@@ -198,8 +250,9 @@ body {
   position: relative;
   float: left;
   text-align: left;
-  border-radius: 5px;
+  
 }
+
 
 .post-form textarea {
   resize: none;
@@ -251,32 +304,51 @@ body {
 .replies-box-header{
   top: -10px;
   position: absolute;
-  color: black;
   right: 12px;
-  /* background-color: white; */
   padding: 0 7px;
-  /* color: grey; */
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url(./images/bestgoldleaf.jpg) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Forum', cursive;
+  font-size: 1.3rem;
+  font-weight: 300;
 }
 
 .single-post-container{
   padding: 10px;
   margin: 20px 10px;
-  /* border-style: solid; */
   border-color: rgb(228, 228, 226);
-  border-radius: 5px;
-  border-radius: 5px;
   background-color: rgba(255,255,255,0.7);
 }
 
 .single-post-selected{
   padding: 10px;
   margin: 20px 10px;
-  /* border-style: solid; */
-  border-color: rgb(228, 228, 226);
-  border-radius: 5px;
-  border-radius: 5px;
-  background-color: rgba(105, 104, 104, 0.7);
+  /* border-color: rgb(35, 68, 38); */
+  border-image: url(./images/bestgoldleaf.jpg) 4 4;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  
+  /* background-color:rgba(190, 185, 185, 0.7); */
+  
+  color: white;
 }
+
+.reply-button{
+  position: relative; 
+  float:right;
+  bottom: 12px;
+  color: rgb(51, 75, 52);
+  /* background: url(./images/bestgoldleaf.jpg) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+  font-family: 'Prata', serif; 
+  cursor: pointer;
+ 
+ } 
 
 .replies-list-container{
   height: 60vh;
@@ -284,7 +356,7 @@ body {
   overflow-y: scroll;
   /* border-bottom-style: solid; */
   border-color: rgb(223, 222, 222);
-  border-radius: 5px;
+  
 
 }
 
@@ -294,14 +366,12 @@ body {
   padding: 10px;
   /* border-style: solid; */
   border-color: rgb(218, 218, 217);
-  border-radius: 5px;
   background-color: rgba(255,255,255,0.7)
 }
 
 .reply-form-container{
  position: absolute;
  bottom: 0;
- border-radius: 5px;
  background-color: rgba(255,255,255,0.5);
 }
 
@@ -309,7 +379,6 @@ body {
   resize: none ;
   width:  calc(20vw - 40px); 
   min-height: calc(20vh - 90px);
-  border-radius: 5px;
   margin-left: 3px;
 }
 
@@ -326,8 +395,14 @@ body {
   text-align: left;
   margin-top: 15vh;
   padding: 20px;
-  background-color: rgba(255,255,255,0.3)
-  
+  background-color: rgba(255,255,255,0.3);
+
+}
+
+.ui.form .field>label{
+  /* color: white !important; */
+  color:  rgb(138, 123, 58) !important  /* Fallback: assume this color ON TOP of image */
+
 }
 
 .faculty-container{
@@ -336,9 +411,9 @@ body {
   /* border-style: solid; */
   overflow: auto;
   margin-top: 70px;
-  background-color: rgba(255,255,255,0.7);
-  border-radius: 5px;
-  color: black;
+  background-color: rgba(224, 221, 221, 0.2);
+  
+  color: white;
 }
 
 
