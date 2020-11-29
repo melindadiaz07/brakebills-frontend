@@ -6,7 +6,7 @@ import ReplyForm from './ReplyForm'
 
 
 
-const MessageBoard = () => {
+const MessageBoard = (props) => {
 
   const [posts, setPosts] = useState(null)
   const [selectedPost, setSelectedPost] = useState(null)
@@ -55,7 +55,7 @@ const MessageBoard = () => {
     fetch("http://localhost:3000/posts", {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({title: title, category: category, content: content, user_id: 35})
+      body: JSON.stringify({title: title, category: category, content: content, user_id: props.currentUser.id})
     })
     .then(res => res.json())
     .then(post => getPosts())
@@ -68,7 +68,7 @@ const MessageBoard = () => {
     fetch("http://localhost:3000/replies", {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({replier: "random@email.com", content: content, post_id: selectedPost.id})
+      body: JSON.stringify({replier: props.currentUser.username, content: content, post_id: selectedPost.id})
     })
     .then(res => res.json())
     .then(newReply => {
@@ -129,12 +129,12 @@ const MessageBoard = () => {
         </div>
         { !selectedPost ? null : 
         <div className="reply-form-container">
-          <ReplyForm handleSubmit={handleReplySubmit} replyTo={selectedPost.user.username} />
+          <ReplyForm handleSubmit={handleReplySubmit} replyTo={selectedPost.user.username} currentUser={props.currentUser}/>
         </div> }
       </div> 
 
       <div className="post-form-container">
-         <PostForm handleSubmit={handlePostSubmit}/>
+         <PostForm handleSubmit={handlePostSubmit} currentUser={props.currentUser} />
        </div>
 
       </div>
