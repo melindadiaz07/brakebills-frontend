@@ -7,10 +7,10 @@ import logo from '../images/goldlogo2.png'
 
 const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname } }) => {
 
-  // let logout = () => {
-  //   localStorage.clear()
-  //   getCurrentUser(null)
-  // };
+  let logout = () => {
+    localStorage.clear()
+    getCurrentUser(null)
+  };
 
   const history = useHistory()
 
@@ -58,16 +58,16 @@ const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname 
           active={pathname === "/faculty"}
         />
         <Menu.Menu position="right">
-        <Menu.Item to="/login" name="Login" onClick={() => {
+        {/* <Menu.Item to="/login" name="Login" onClick={() => {
             logIn()
               }
-            } />
-        {/* <Menu.Item
+            } /> */}
+        <Menu.Item
           as={NavLink}
           to="/login"
           name="Login"
           active={pathname === "/login"}
-        /> */}
+        />
         
         </Menu.Menu>
         

@@ -34,6 +34,8 @@ body {
 }
 
 
+
+
 .ui.secondary.menu .item {
   color: rgb(238, 236, 236) !important;  /* Fallback: assume this color ON TOP of image */
   background: url(https://images.creativemarket.com/0.1.0/ps/3117791/300/200/m2/fpc/wm0/oi1o929rioedbm29r6eygrne3onlsvxewbjmvrds3ddquy7jkj2svhi2fbcgeiyi-.jpg?1502725711&s=cf42cc77b82d8850fc8fa96d57f666a1) !important;
@@ -49,9 +51,11 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 500;
+  font-weight: 300;
   
 }
+
+
 
 .nav-logo img{
   max-height: 8vh;
@@ -67,6 +71,8 @@ body {
   border-bottom-style: solid !important;
 }
 
+
+
 .home-page-vid-container {
   width: 100vw;
   max-height: 100vh;
@@ -74,8 +80,11 @@ body {
   background-repeat: no-repeat;
   overflow-x: hidden;
   overflow-y: hidden;
-  background-attachment: fixed
+  background-attachment: fixed;
+  
 }
+
+
 
 
 .home-page-container h2{
@@ -96,19 +105,22 @@ body {
   font-size: 10vh;
   top: -10px;
   line-height: 75%;
-  
 }
 
-.header-background{
+/* .header-background{
   height: 35vh;
   width: 55vw;
   background-color: rgb(245, 239, 239);
-  /* z-index: 1; */
   position: absolute;
   opacity: 0.2;
-  top: 28vh;
+  top: 29vh;
   left: 23vw;
-}
+  filter: drop-shadow(5px 10px 5px black);
+} */
+
+ video {
+   filter: brightness(60%);
+ }
 
 span.header-span{
   font-size: 4.5vh;
@@ -137,6 +149,7 @@ span.header-span{
   font-size: 3.2vh;
   
 }
+
 
 
 .ui.pointing.secondary.menu{
@@ -198,6 +211,7 @@ span.header-span{
   overflow: hidden;
   margin-bottom: 10vh;
   max-height: 50vh;
+  filter: drop-shadow(5px 10px 7px rgb(7, 7, 7));
 }
 
 .carousel-inner img {
@@ -476,7 +490,6 @@ select.filter-category{
   overflow: auto;
   margin-top: 70px;
   background-color: rgba(224, 221, 221, 0.2);
-  
   color: white;
 }
 
@@ -487,6 +500,7 @@ select.filter-category{
   margin: 20px;
   height: 200px;
   width: 200px;
+  filter: drop-shadow(5px 10px 5px black)
 }
 
 
@@ -608,4 +622,42 @@ select.filter-category{
 }
 
 
+.login-form-container{
+  text-align: left;
+  position: absolute;
+  width: 35vw;
+  left: 35vw;
+  top: 20vh;
+  color: white !important;
+  padding: 30px 40px;
+  padding-left: 60px;
+  background-color: rgba(253, 245, 245, 0.15);
+  font-family: 'Libre Baskerville', serif;
+}
 
+.login-form-container h2{
+  font-weight: 300;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  
+}
+
+.login-form-container label{
+  font-size: 1.1rem;
+}
+
+.login-form-container input{
+  font-size: 1rem;
+  width: 90%;
+  height: 33px;
+  background-color: rgba(253, 245, 245, 0.6);
+  border-style: hidden;
+}
+
+.login-form-container button{
+  margin-top: 5px;
+  padding: 7px 20px;
+  border: hidden;
+  border-radius: 3px;
+}

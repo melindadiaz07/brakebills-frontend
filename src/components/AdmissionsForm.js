@@ -43,6 +43,10 @@ let addUser = () => {
 
   return(
     <div className="admissions-form-container">
+      <p>Thank you for your interest in applying to Brakebills.  Traditionally, our perstigious University
+        has operated admissions on an invite-only schema. If you would like to be considered
+        for an admissions interview, please complete the form below to the best of your ability.
+      </p>
         <Form  size="small" key="small" >
         <Form.Group widths='equal'>
           <Form.Input onChange={updateFirst} fluid label='First name' value={first} placeholder='First name' /><br />
@@ -54,7 +58,7 @@ let addUser = () => {
       <Form.Input label='Course of Study' placeholder='Course of Study' />
     </Form.Group>
     <br></br> <br></br> 
-    <h3>Please take your time answering a series of entry-level questions: </h3>
+    
     <br></br>
     <Form.Group widths={2}>
       <Form.Input label={address} placeholder='Address' />

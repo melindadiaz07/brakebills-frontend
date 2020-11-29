@@ -8,13 +8,14 @@ import Login from './components/Login'
 import NavBar from './components/NavBar'
 import Faculty from './components/Faculty'
 import MessageBoard from './components/MessageBoard'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 
-function App() {
+const  App = () => {
 
   const [logged_in, setLogged_in] = useState(false)
+  const [currentUser, setCurrentuser] = useState(null)
 
   let logOut = () => {
     setLogged_in(false)
@@ -23,6 +24,24 @@ function App() {
   let logIn = () => {
     setLogged_in(true)
   }
+
+  let getCurrentUser = (currentUser) => {
+    setCurrentuser(currentUser)
+  }
+
+  let getUser = () => {
+    if(localStorage.getItem("token")){
+      const headers = {headers: {"Authentication": `Bearer ${localStorage.getItem("token")}`}}
+      fetch('http://localhost:3000/api/v1/profile', headers)
+      .then(res => res.json())
+      .then(userData => {
+       setCurrentuser(userData)
+      })
+  }
+}
+
+useEffect(getUser, [logged_in])
+
 
   return (
     <div className="App">
