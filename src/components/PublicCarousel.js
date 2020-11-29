@@ -1,11 +1,11 @@
 import React from 'react';
 import image1 from '../images/fountain.jpg'
 import image2 from '../images/library.jpg'
-import image3 from '../images/sex.jpg'
+import image3 from '../images/teaching1.jpg'
 import image4 from '../images/lab.jpg'
 import image5 from '../images/library2.jpg'
 
-const VideoCarousel = () => {
+const PublicCarousel = () => {
 
 
   return (
@@ -57,4 +57,4 @@ const VideoCarousel = () => {
   )
 }
 
-export default VideoCarousel;
+export default PublicCarousel;

@@ -1,5 +1,7 @@
 import React from 'react'
-import VideoCarousel from './VideoCarousel'
+import PublicCarousel from './PublicCarousel'
+import PrivateCarousel from './PrivateCarousel'
+
 
 const About = ({logged_in}) => {
 
@@ -14,7 +16,7 @@ const About = ({logged_in}) => {
               <h3>of Arts and Sciences</h3>
             </h2>
             <p>Brakebills University for Arts and Sciences is the premier institution for the study of Humanities, Social Sciences, and Natural Sciences in North America.</p><br></br>
-            <div className="carousel-container"><VideoCarousel /></div>
+            <div className="carousel-container"><PublicCarousel /></div>
             </div>
             
             <div className="right-about-page-container">
@@ -30,7 +32,7 @@ const About = ({logged_in}) => {
            coffeehouses; and blue-faced Tuareg philosophers from southern Morocco.
  
            <hr></hr>
-       <br></br>The banning of Battlefield Strategy
+       <br></br>The Banning of Battlefield Strategy<br></br>
        In 1879, Brakebills provided training in Battlefield Strategy to its students, and Professor Neeny Bigby led the course during World War II, when
        Rupert Chatwin attended the school after he was discharged from the war due to his injuries. Neeny Bigby taught Chatwin how to build a fragment mine, a powerful weapon that required extremely precise engineering, which Chatwin used to win the Battle of the Bulge in 1945 for the
        Allied Powers. However, due to the high amount of student deaths in the 1970s, the course was banned by the Brakebills Board of Trustees, and Neeny Bigby was
@@ -42,14 +44,18 @@ const About = ({logged_in}) => {
       
       ) : (
         <div>
+          <div className="left-about-page-container">
           <h2>
-            Brakebills University for Magical Pedagogy
+            Brakebills University <br></br><h3>for Magical Pedagogy</h3>
           </h2>
           <br></br>
           <p>Brakebills University for Magical Pedagogy, also known as Brakebills College for Magical Pedagogy, Brakebills Preparatory College of Magic, Brakebills Academy for Magical Pedagogy, or simply Brakebills, is the premier institution for the study of magic in North America.</p>
-          <hr></hr>
           <span className="about-page-quote"><p>"This school exists for a single and timeless purpose: to reveal your innate abilities and hone them to the highest degree. Now, what you do with it after that is entirely up to you. If you want to take over the world, we don't teach that, but give it a go."<br></br> ―Dean Henry Fogg</p></span>
-
+          <div className="carousel-container">
+            <PrivateCarousel /></div>
+          </div>
+          
+          <div className="right-about-page-container">
           <hr></hr>
           <p>Brakebills University was established in Upstate New York in 1763 and became the 
             standard-bearer of the American magical society, having given rise to generation after generation of 
@@ -73,6 +79,7 @@ const About = ({logged_in}) => {
         Ultra, a powerful spell that required the strength of a Master Magician to cast, which Chatwin used to win the Battle of the Bulge in 1945 for the 
         Allied Powers. However, due to the high amount of student deaths in the 1970s, the course was banned by the Brakebills Board of Trustees, and Neeny Bigby was 
         fired from the school. Prior to leaving, however, Neeny Bigby left clues in the school's library for how to find her in the future when a Brakebills student would need her help.</p>
+        </div>
         </div>
       )
      }
