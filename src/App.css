@@ -185,10 +185,14 @@ body {
   max-height: 50vh;
 }
 
-.carousel-container img {
+.carousel-inner img {
   filter: grayscale(30%);
   width: 30vw;
-  
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  width: 7px;
+  bottom: 45% !important;
 }
 
 .about-page-container hr{
@@ -492,8 +496,9 @@ select.filter-category{
   margin-top: 10vh;
   padding: 25px;
   position:relative;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
   color: white;
+  padding: 25px;
   /* margin-bottom: 20vh; */
 
 }
@@ -540,9 +545,8 @@ select.filter-category{
   /* border-style: solid; */
   width: 70vw;
   margin-left: 10vw;
-  background-color: rgba(255,255,255,0.4);
-  border-top: solid 1px;
-  border-color: rgb(17, 61, 15);
+  background-color: rgba(255,255,255,0.2);
+
   color: white;
   position: relative;
   padding: 7vh 10vw;
