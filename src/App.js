@@ -15,18 +15,21 @@ import React, { useEffect, useState } from 'react'
 const  App = () => {
 
   const [logged_in, setLogged_in] = useState(false)
-  const [currentUser, setCurrentuser] = useState(null)
+  const [currentUser, setCurrentUser] = useState(null)
 
 
   let logOut = () => {
     setLogged_in(false)
+    setCurrentUser(null)
   }
 
   let logIn = () => {
     setLogged_in(true)
   }
 
-
+  let getCurrentUser = (user) => {
+    setCurrentUser(user)
+  }
 
 
   return (
@@ -62,11 +65,11 @@ const  App = () => {
 
       
       <Route exact path='/login' render={()=> {
-        return <Login logged_in={logged_in} logIn={logIn}/>
+        return !currentUser ? <Login logged_in={logged_in} logIn={logIn} getCurrentUser={getCurrentUser} /> : <Redirect to='/home'/>
       }} />
 
       <Route exact path='/messageboard' render={()=> {
-        return <MessageBoard logged_in={logged_in}/>
+        return <MessageBoard logged_in={logged_in} currentUser={currentUser}/>
       }} />
 
 

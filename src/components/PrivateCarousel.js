@@ -1,7 +1,7 @@
 import React from 'react';
 import image1 from '../images/hands.jpg'
 import image2 from '../images/homepagevid1.gif'
-import image3 from '../images/sex.jpg'
+import image3 from '../images/sexEd.jpg'
 import image4 from '../images/lab.jpg'
 import image5 from '../images/library2.jpg'
 

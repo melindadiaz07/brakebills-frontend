@@ -1,11 +1,11 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom'
 
 class Login extends React.Component {
 
   state = {
     username: "",
     password: "",
-    currentUser: ""
   };
 
   handleChange = (event) => {
@@ -22,15 +22,19 @@ class Login extends React.Component {
      body: JSON.stringify({username: this.state.username, password: this.state.password})
    })
    .then(res => res.json())
-   .then(console.log)
+   .then(data => {
     
-    // if(data.authenticated) {
-    //   console.log(data)
-    //   localStorage.setItem("token", data.token)
+    if(data.authenticated) {
+      console.log(data)
+      localStorage.setItem("token", data.token)
+      this.props.getCurrentUser(data.user)
+      this.props.logIn()
       
-    // } else {
-    //   console.log(data);
-    // }
+
+    } else {
+      console.log(data);
+      }
+    })
   };
 
   render(){
@@ -47,7 +51,7 @@ class Login extends React.Component {
       <input onChange={this.handleChange} name="username" placeholder=" email" value={this.state.username}/>
       <br></br><br></br>
       <label>Password: </label><br></br>
-      <input onChange={this.handleChange} name="password" placeholder=" password" value={this.state.password}/>
+      <input onChange={this.handleChange} name="password" type="password" placeholder=" password" value={this.state.password}/>
 
       <br></br><br></br>
     <button onClick={this.handleLoginSubmit}>Login</button>
