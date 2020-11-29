@@ -17,6 +17,7 @@ const  App = () => {
   const [logged_in, setLogged_in] = useState(false)
   const [currentUser, setCurrentuser] = useState(null)
 
+
   let logOut = () => {
     setLogged_in(false)
   }
@@ -25,22 +26,7 @@ const  App = () => {
     setLogged_in(true)
   }
 
-  let getCurrentUser = (currentUser) => {
-    setCurrentuser(currentUser)
-  }
 
-  let getUser = () => {
-    if(localStorage.getItem("token")){
-      const headers = {headers: {"Authentication": `Bearer ${localStorage.getItem("token")}`}}
-      fetch('http://localhost:3000/api/v1/profile', headers)
-      .then(res => res.json())
-      .then(userData => {
-       setCurrentuser(userData)
-      })
-  }
-}
-
-useEffect(getUser, [logged_in])
 
 
   return (
@@ -76,7 +62,7 @@ useEffect(getUser, [logged_in])
 
       
       <Route exact path='/login' render={()=> {
-        return <Login logged_in={logged_in}/>
+        return <Login logged_in={logged_in} logIn={logIn}/>
       }} />
 
       <Route exact path='/messageboard' render={()=> {

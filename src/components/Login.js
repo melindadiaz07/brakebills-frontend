@@ -4,35 +4,33 @@ class Login extends React.Component {
 
   state = {
     username: "",
-    password: ""
+    password: "",
+    currentUser: ""
   };
 
-  handleChange = (e, { name, value }) => {
-    this.setState({ [name]: value });
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleLoginSubmit = async () => {
-    const {username, password} = this.state 
 
-    const credentials = {username, password}
+  handleLoginSubmit = (e) => {
+    e.preventDefault()
 
-    const reqPackage = {}
-      reqPackage.headers = {"Content-Type": "application/json"}
-      reqPackage.method = "POST"
-      reqPackage.body = JSON.stringify(credentials)
-
-    const res = await fetch(`http://localhost:3000/api/v1/login`, reqPackage)
-    const data = await res.json()
+   fetch("http://localhost:3000/api/v1/login", {
+     method: "POST",
+     headers: {"Content-Type": "application/json"},
+     body: JSON.stringify({username: this.state.username, password: this.state.password})
+   })
+   .then(res => res.json())
+   .then(console.log)
     
-    if(data.authenticated) {
-      console.log(data)
+    // if(data.authenticated) {
+    //   console.log(data)
+    //   localStorage.setItem("token", data.token)
       
-      localStorage.setItem("token", data.token)
-
-      this.props.getCurrentUser(data.user)
-    } else {
-      console.log(data);
-    }
+    // } else {
+    //   console.log(data);
+    // }
   };
 
   render(){
