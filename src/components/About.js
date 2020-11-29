@@ -1,4 +1,5 @@
 import React from 'react'
+import VideoCarousel from './VideoCarousel'
 
 const About = ({logged_in}) => {
 
@@ -7,10 +8,16 @@ const About = ({logged_in}) => {
      { !logged_in ?
         (
         <div>
+          <div className="left-about-page-container">
             <h2>
-              Brakebills University of Arts and Sciences
+              Brakebills University<br></br> 
+              <h3>of Arts and Sciences</h3>
             </h2>
-            <p>Brakebills University for Arts and Sciences is the premier institution for the study of Humanities, Social Sciences, and Natural Sciences in North America.</p>
+            <p>Brakebills University for Arts and Sciences is the premier institution for the study of Humanities, Social Sciences, and Natural Sciences in North America.</p><br></br>
+            <div className="carousel-container"><VideoCarousel /></div>
+            </div>
+            
+            <div className="right-about-page-container">
         <hr></hr>
          <p>Brakebills University was established in Upstate New York in 1763 and became the
            standard-bearer of the American high society, having given rise to generation after generation of
@@ -29,7 +36,7 @@ const About = ({logged_in}) => {
        Allied Powers. However, due to the high amount of student deaths in the 1970s, the course was banned by the Brakebills Board of Trustees, and Neeny Bigby was
        fired from the school.</p>
  
-
+       </div>
 
         </div>
       

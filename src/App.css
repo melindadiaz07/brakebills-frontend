@@ -152,13 +152,42 @@ body {
   width: 65vw;
   text-align: left;
   margin-left: 17vw;
-  background-color: rgba(253, 245, 245, 0.2);
+  /* background-color: rgba(253, 245, 245, 0.2); */
   padding: 60px;
   color: rgb(219, 218, 213);
   font-size: 1.4rem;
   margin-bottom: 10vh;
   font-family: 'Cormorant Garamond', serif;
   letter-spacing: 1px;
+}
+
+.left-about-page-container{
+  position: absolute;
+  left: 3vw;
+  top: 20vh;
+  width: 40vw; 
+}
+
+.right-about-page-container{
+  position: absolute;
+  right: 3vw;
+  top: 20vh;
+  width: 48vw; 
+  /* background-color: rgba(253, 245, 245, 0.1); */
+  padding: 25px;
+}
+
+.carousel-container{
+  margin-top: 4vh;
+  width: 105%;
+  overflow: hidden;
+  margin-bottom: 10vh;
+  max-height: 50vh;
+}
+
+.carousel-container img {
+  filter: grayscale(30%);
+  width: 30vw;
   
 }
 
@@ -173,7 +202,7 @@ body {
 }
 
 .about-page-container h2{
-  text-align: center;
+  text-align: left;
   font-family: 'Libre Baskerville', serif;
   font-weight: 300;
   color: white;  /* Fallback: assume this color ON TOP of image */
@@ -182,6 +211,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 30px;
+  font-size: 6rem;
+}
+
+.about-page-container h3 {
+  font-size: 2.5rem;
+  margin-left: 5vw;
+  font-weight: 300;
+  font-family: 'Cormorant Garamond', serif;
+  margin-top: 0px;
+  font-style: italic;
 }
 
 .about-page-quote p{
@@ -195,7 +234,6 @@ body {
 .about-page-container p{
   margin-bottom: 30px;
 }
-
 
 
 .message-board-container{
@@ -454,7 +492,7 @@ select.filter-category{
   margin-top: 10vh;
   padding: 25px;
   position:relative;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.2);
   color: white;
   /* margin-bottom: 20vh; */
 
@@ -484,21 +522,25 @@ select.filter-category{
 }
 
 
-
 .department-info-container p {
   position: absolute;
   right: 5px;
   bottom: 5px;
   font-size: 1.2rem;
   cursor: pointer;
-  color: rgb(19, 56, 19);
+  color: rgb(232, 236, 232);
+  padding: 4px;
+  
+  border-image: url(./images/bestgoldleaf.jpg) 4 4;
+  border-style: double;
+  border-width: 1px;
 }
 
 .area-of-study-card{
   /* border-style: solid; */
   width: 70vw;
   margin-left: 10vw;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.4);
   border-top: solid 1px;
   border-color: rgb(17, 61, 15);
   color: white;
@@ -507,7 +549,6 @@ select.filter-category{
   text-align: left;
   
 }
-
 
 .single-aos{
   margin-bottom: 7vh;

@@ -24,7 +24,7 @@ render() {
    
         <h2>{this.props.dept.fake_name}</h2>
         <h3>{this.props.dept.fake_description}</h3>
-        <p onClick={() => this.showAreaOfStudy()}><em>See areas of study </em> ▾  </p>
+        <p onClick={() => this.showAreaOfStudy()}> See areas of study  ▾  </p>
         </div>
         <div>
         { !this.state.areaOfStudyShown ? null : 
@@ -41,7 +41,7 @@ render() {
    
         <h2>{this.props.dept.real_name}</h2>
         <h3>{this.props.dept.real_description}</h3>
-        <p onClick={() => this.showAreaOfStudy()}><em>See areas of study </em> ▾ </p>
+        <p onClick={() => this.showAreaOfStudy()}> See areas of study ▾ </p>
         </div>
         <div>
         { !this.state.areaOfStudyShown ? null : 
