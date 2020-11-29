@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Form } from 'semantic-ui-react'
 
 const AdmissionsForm = () => {
@@ -8,8 +8,15 @@ const [last, setLast] = useState("")
 const [email, setEmail] = useState("")
 const [submitted, setSubmitted] = useState(false)
 
+const [address, setAddress] = useState("Address")
+
+
+
+
 let updateFirst = (event) => {
   setFirst(event.target.value)
+  setAddress("Pineapple")
+  setTimeout(function() {setAddress("Address")}, 3000)
 }
 
 let updateLast = (event) => {
@@ -46,13 +53,16 @@ let addUser = () => {
       <Form.Input label='Current University' placeholder='Current University' />
       <Form.Input label='Course of Study' placeholder='Course of Study' />
     </Form.Group>
+    <br></br> <br></br> 
+    <h3>Please take your time answering a series of entry-level questions: </h3>
+    <br></br>
     <Form.Group widths={2}>
-      <Form.Input label='Address' placeholder='Address' />
+      <Form.Input label={address} placeholder='Address' />
       <Form.Input label='Phone' placeholder='Phone' />
     </Form.Group>
        <Form.Group unstackable widths={3}>
-      <Form.Input label='Current University' placeholder='Current University' />
-      <Form.Input label='Course of Study' placeholder='Course of Study' />
+      <Form.Input label=' ἀγοράν.' placeholder='Current University' />
+      <Form.Input label='老鹰攻击' placeholder='Course of Study' />
       <Form.Input label='Course of Study' placeholder='Course of Study' />
     </Form.Group>
     <Form.Group widths={3}>

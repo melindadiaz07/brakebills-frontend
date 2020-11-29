@@ -460,12 +460,13 @@ select.filter-category{
   padding: 20px;
   background-color: rgba(255,255,255,0.3);
 
+
 }
 
 .ui.form .field>label{
-  /* color: white !important; */
-  color:  rgb(138, 123, 58) !important  /* Fallback: assume this color ON TOP of image */
-
+  
+  color:  rgb(185, 169, 94) !important; 
+  font-size: 1.1rem !important
 }
 
 .faculty-container{
