@@ -15,7 +15,6 @@ const ReplyForm = (props) => {
     setReply("")
   }
 
-
   return(
     <div >
       <form  onSubmit={(event) => {

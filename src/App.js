@@ -69,7 +69,7 @@ const  App = () => {
       }} />
 
       <Route exact path='/messageboard' render={()=> {
-        return <MessageBoard logged_in={logged_in} currentUser={currentUser}/>
+        return currentUser ? <MessageBoard logged_in={logged_in} currentUser={currentUser}/> : <Redirect to='/login' />
       }} />
 
 

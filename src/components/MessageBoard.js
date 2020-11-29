@@ -22,12 +22,18 @@ const MessageBoard = (props) => {
       previousEl.className="single-post-container" 
     }
 
-    setSelectedPost(post)
+  setSelectedPost(post)
     event.currentTarget.className="single-post-selected"
     if (post.replies !== null) {
       setRenderedReplies(post.replies)
       scrollToBottomReplies()
     } 
+  }
+
+  const exitReplies = () => {
+    let previousEl = document.getElementById(selectedPost.id)
+      previousEl.className="single-post-container" 
+      setRenderedReplies(null)
   }
 
   let getPosts = () => {
@@ -74,6 +80,12 @@ const MessageBoard = (props) => {
     .then(newReply => {
       setRenderedReplies([...renderedReplies, newReply])
       scrollToBottomReplies()
+          fetch("http://localhost:3000/posts")
+          .then(res => res.json())
+          .then(postsData => {
+          setPosts(postsData)
+          setFilteredPosts(postsData)
+      })
     })
   }
 
@@ -81,6 +93,7 @@ const MessageBoard = (props) => {
     event.preventDefault()
     let filter = (event.target.value)
     filterByCategory(filter)
+    setSelectedPost(null)
   }
 
   const filterByCategory = (filter) => {
@@ -102,8 +115,8 @@ const MessageBoard = (props) => {
           <option  value="All" >All</option>
             <option  value="Misc" >Misc</option>
             <option  value="Lost and Found" >Lost and Found</option>
-            <option  value="Housing">Housing</option>
-            <option  value="Sports">Sports</option>
+            <option  value="Warnings">Warnings</option>
+            <option  value="Jobs">Jobs</option>
             <option  value="Events">Events</option>
           </select><br/>
       </div>
@@ -117,7 +130,7 @@ const MessageBoard = (props) => {
       </div>
 
       <div className="replies-container">
-        
+        <button onClick={exitReplies} className="exit-replies"> x </button>
         <div className="replies-list-container">
         <h4 className="replies-box-header"><em>Replies</em></h4>
         { !renderedReplies ? null : 

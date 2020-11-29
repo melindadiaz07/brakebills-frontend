@@ -42,8 +42,8 @@ const PostForm = (props) => {
           <select onChange={updateCategory} name="catgory" id="post-category">
             <option  value="Misc" >Misc</option>
             <option  value="Lost and Found" >Lost and Found</option>
-            <option  value="Housing">Housing</option>
-            <option  value="Sports">Sports</option>
+            <option  value="Warnings">Warnings</option>
+            <option  value="Jobs">Jobs</option>
             <option  value="Events">Events</option>
           </select><br/>
           <button type="submit" className="post-submit-btn" >Submit</button>

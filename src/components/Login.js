@@ -6,6 +6,7 @@ class Login extends React.Component {
   state = {
     username: "",
     password: "",
+    unauthorized: false
   };
 
   handleChange = (event) => {
@@ -29,9 +30,11 @@ class Login extends React.Component {
       localStorage.setItem("token", data.token)
       this.props.getCurrentUser(data.user)
       this.props.logIn()
-      
-
+    
     } else {
+      this.setState({
+        unauthorized: true
+      })
       console.log(data);
       }
     })
@@ -40,9 +43,7 @@ class Login extends React.Component {
   render(){
 
     return(
-      <div className="login-form-container">
-
-
+  <div className="login-form-container">
 
     <h2>Log in to your University account: </h2>
 
@@ -58,6 +59,13 @@ class Login extends React.Component {
 
     </form>
   
+  { 
+  !this.state.unauthorized ? null :
+    <div className="invalid-login">
+      Invalid username or password
+    </div>
+  
+  }
   
 </div>
     )
