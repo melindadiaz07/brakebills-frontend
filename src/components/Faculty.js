@@ -22,7 +22,7 @@ const Faculty = ({logged_in}) => {
         (
         <div>
           <div className="faculty-header">
-          <em>Our outstanding faculty...</em>
+          <em>Brakebills' Outstanding Faculty</em>
         </div>
             <p>
               { !faculty ? null : faculty.map(person => {
@@ -34,7 +34,7 @@ const Faculty = ({logged_in}) => {
       ) : (
         <div className="faculty-page">
           <div className="faculty-header">
-          <em>Our spellcasting faculty...</em>
+          <em>Brakebills' Outstanding Faculty</em>
         </div>
           <p>
           { !faculty ? null : faculty.map(person => {

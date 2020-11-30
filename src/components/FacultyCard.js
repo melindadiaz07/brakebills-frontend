@@ -12,10 +12,10 @@ const FacultyCard = (props) => {
          
       <div >
        <div className="faculty-container">
-           <div className={`${imageName}-photo faculty-image` }  alt="faculty image" /><br />
+           <div className={`${imageName}-photo faculty-image` } alt="faculty image" /><br />
            <div className="faculty-info-container">
             <h3>{ props.faculty.name } </h3>
-            <p> Bio: { props.faculty.fake_bio } </p>
+            <p>{ props.faculty.fake_bio } </p>
             </div>
         </div>
        </div>

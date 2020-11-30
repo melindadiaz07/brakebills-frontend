@@ -383,7 +383,7 @@ select.filter-category{
   right: 12px;
   padding: 0 7px;
   color: white; 
-  background: url(./images/bestgoldleaf.jpg) ;
+  background: url(./images/bestgoldleaf.jpg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -484,20 +484,66 @@ select.filter-category{
   margin-left: 15vw;
   text-align: left;
   margin-top: 15vh;
-  padding: 20px;
+  padding: 5vh 7vw;
   background-color: rgba(255,255,255,0.3);
   margin-bottom: 15vh;
+  font-family: 'Cormorant Garamond', serif;
+  
+}
+
+.admissions-form-container hr{
+  width: 50vw;
+  height: 2px;
+  background-image: url(./images/bestgoldleaf.jpg);
+  background-position: center center;
+  border-style: hidden;
+}  
+
+.admissions-form-container p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 7vh;
+  font-style: italic;
+  width: 85%;
+  margin-left: 3vw;
+}
+
+.ui.form .field{
+  margin-bottom: 17px !important;
+  
 }
 
 .ui.form .field>label{
-  
-  color:  rgb(185, 169, 94) !important; 
-  font-size: 1.1rem !important
+  color:  white !important; 
+  font-size: 1.4rem !important;
+  margin-bottom: 17px !important;
+  font-weight: 300 !important;
+  width: 90%;
 }
+
+.ui.form .field>button{
+ 
+  margin-top: 20px !important;
+  color: rgb(27, 48, 23);
+}
+
+.quiz-item .ui.input{
+  width: 30vw !important;
+}
+
+.quiz-item{
+  margin-top: 13vh !important;
+  margin-bottom: 10vh !important;
+  /* margin-left: 3vw !important; */
+  margin-right: 5vw !important;
+}
+
+
+
 
 .faculty-container{
   margin-left: 10vw;
-  width: 60vw;
+  width: 70vw;
   /* border-style: solid; */
   overflow: auto;
   margin-top: 70px;
@@ -507,14 +553,26 @@ select.filter-category{
 }
 
 
+.faculty-header{
+  margin-top: 7vh;
+  font-size: 2rem;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  background: url(./images/bestgoldleaf.jpg) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .faculty-image{
   display: block;
   float: left;
   margin: 20px;
   height: 200px;
   width: 200px;
-  filter: drop-shadow(5px 10px 5px black)
+  filter: drop-shadow(5px 10px 5px black);
 }
+
 
 
 .faculty-info-container{
@@ -523,8 +581,28 @@ select.filter-category{
   /* border-style: solid; */
   margin-left: 50px;
   float: left; 
-  margin-top: 50px;
+  margin-top: 3vh;
+  font-family: 'Cormorant Garamond', serif;
 }
+
+.faculty-info-container h3{
+  font-size: 1.7rem;
+  display: inline;
+  padding: 7px 13px;
+  font-family: 'Cormorant Garamond', serif;
+  border: solid 1px;
+  border-image: url(./images/bestgoldleaf.jpg) 4 4;
+ 
+
+}
+
+.faculty-info-container p{
+  font-size: 1.2rem;
+  margin-top: 20px;
+  width: 40vw;
+  
+}
+
 
 .faculty-page{
   margin-bottom: 50px;
@@ -617,12 +695,15 @@ select.filter-category{
 .eleanorlipson-photo{
   background: url(./images/eleanorlipson.jpg);
   background-size: cover;
+
 }
 
 .hamishbax-photo{
   background: url(./images/hamishbax.jpg);
   background-size: cover;
+ 
 }
+
 
 .pearlsunderland-photo{
   background: url(./images/pearlsunderland.jpg);

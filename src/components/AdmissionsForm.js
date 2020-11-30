@@ -8,15 +8,22 @@ const [last, setLast] = useState("")
 const [email, setEmail] = useState("")
 const [submitted, setSubmitted] = useState(false)
 
-const [address, setAddress] = useState("Address")
+const [change1, setChange1] = useState("24 / x+1")
+const [change2, setChange2] = useState("Kings of Britain")
+const [change3, setChange3] = useState("1")
 
 
-
+let cascadeChange1 = () => {
+  setChange1("⋓ ☥ ☬")
+  setChange2("Botanica Occultus")
+  setTimeout(function() {setChange1("24 / x+1")}, 1000)
+  setTimeout(function() {setChange2("Kings of Britain")}, 2000)
+  setTimeout(function() {setChange3("〆")}, 3000)
+  setTimeout(function() {setChange3("1")}, 5000)
+}
 
 let updateFirst = (event) => {
   setFirst(event.target.value)
-  setAddress("Pineapple")
-  setTimeout(function() {setAddress("Address")}, 3000)
 }
 
 let updateLast = (event) => {
@@ -44,37 +51,45 @@ let addUser = () => {
   return(
     <div className="admissions-form-container">
       <p>Thank you for your interest in applying to Brakebills.  Traditionally, our perstigious University
-        has operated admissions on an invite-only schema. If you would like to be considered
-        for an admissions interview, please complete the form below to the best of your ability.
+        has operated admissions on an invite-only basis. If you would like to be considered
+        for an admissions interview, please complete the form below to the best of your abilities.
       </p>
-        <Form  size="small" key="small" >
+      <hr></hr><br></br><br></br>
+        <Form   >
         <Form.Group widths='equal'>
-          <Form.Input onChange={updateFirst} fluid label='First name' value={first} placeholder='First name' /><br />
+          <Form.Input onChange={updateFirst}  fluid label='First name' value={first} placeholder='First name' /><br />
           <Form.Input onChange={updateLast} fluid label='Last name' value={last} placeholder='Last name' />
-          <Form.Input onChange={updateEmail} fluid label='Email' value={email} placeholder='Email address' />
+          <Form.Input onChange={updateEmail}  fluid label='Email' value={email} placeholder='Email address' />
        </Form.Group>
        <Form.Group unstackable widths={2}>
       <Form.Input label='Current University' placeholder='Current University' />
       <Form.Input label='Course of Study' placeholder='Course of Study' />
     </Form.Group>
-    <br></br> <br></br> 
+    <br></br><br></br>
+    <hr></hr>
+   
+   <div classname="quiz-container">
+
+      <Form.Input onChange={cascadeChange1} className="quiz-item" label={`What is one possible solution to the equation (${change1}) - (12 / x-1) = ${change3} ?`} 
+      placeholder='Answer' />
+   
+    <Form.Input className="quiz-item" label={`Who wrote the 12th-century account Historia regum Britanniae (The History of the ${change2}), which is often credited with making the legend of King Arthur popular?`} 
+      placeholder='Answer' />
+
+    <Form.Input className="quiz-item" label={`Translate the following:  "ἡ μὲν Ξανθίππη πολλάκις λέγει · "ἴθι δή" καὶ τὸν Σωκράτην ἐκ τοῦ οἴκου ἐλαύνει. ἔπειτα δὲ, ὁ Σωκράτης πρὸς τὴν ἀγορὰν βραδέως βαίνει. ὁ δὲ Σωκράτης χαίρει βαίνειν ἐκεῖσε διότι ὁ Σωκράτης φιλεῖ μετὰ τῶν φιλῶν λέγειν."`} 
+      placeholder='Answer' />
+
+    <Form.Input className="quiz-item" label={`If the expression (4x² / 2x - 1)  is written in the equivalent form  (1 / 2x - 1)+ A, what is A in terms of x?`} 
+      placeholder='Answer' />
+
+<Form.Input className="quiz-item" label={`What natural human bodily fluid did Romans use as mouth wash because of the presence of ammonia in it?`} 
+      placeholder='Answer' />
+
+<Form.Input className="quiz-item" label={`What natural human bodily fluid did Romans use as mouth wash because of the presence of ammonia in it?`} 
+      placeholder='Answer' />
+  
+  </div>
     
-    <br></br>
-    <Form.Group widths={2}>
-      <Form.Input label={address} placeholder='Address' />
-      <Form.Input label='Phone' placeholder='Phone' />
-    </Form.Group>
-       <Form.Group unstackable widths={3}>
-      <Form.Input label=' ἀγοράν.' placeholder='Current University' />
-      <Form.Input label='老鹰攻击' placeholder='Course of Study' />
-      <Form.Input label='Course of Study' placeholder='Course of Study' />
-    </Form.Group>
-    <Form.Group widths={3}>
-      <Form.Input label='Address' placeholder='Address' />
-      <Form.Input label='Phone' placeholder='Phone' />
-      <Form.Input label='Phone' placeholder='Phone' />
-    </Form.Group>
-    <Form.Checkbox label='I agree to the Conditions' />
        <Form.Button content='Submit' onClick={addUser} />
        </Form>
        {
