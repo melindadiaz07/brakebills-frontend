@@ -485,11 +485,12 @@ select.filter-category{
   text-align: left;
   margin-top: 15vh;
   padding: 5vh 7vw;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.1);
   margin-bottom: 15vh;
   font-family: 'Cormorant Garamond', serif;
   
 }
+
 
 .admissions-form-container hr{
   width: 50vw;
@@ -539,7 +540,11 @@ select.filter-category{
 }
 
 
-
+.admissions-response{
+  margin: 10vh 0;
+  font-size: 1.5rem;
+  font-style: italic;
+}
 
 .faculty-container{
   margin-left: 10vw;
@@ -552,6 +557,21 @@ select.filter-category{
   padding-bottom: 20px;
 }
 
+.private-admissions{
+  font-size: 1.4rem;
+ 
+  margin-top: 13vh;
+  width: 50vw;
+  margin-left: 25vw;
+  padding: 5vh 5vw;
+  background-color: rgba(224, 221, 221, 0.1);
+}
+
+.private-admissions form{
+  text-align: left;
+  font-style: none;
+
+}
 
 .faculty-header{
   margin-top: 7vh;
@@ -593,11 +613,10 @@ select.filter-category{
   border: solid 1px;
   border-image: url(./images/bestgoldleaf.jpg) 4 4;
  
-
 }
 
 .faculty-info-container p{
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 20px;
   width: 40vw;
   

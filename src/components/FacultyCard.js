@@ -26,7 +26,7 @@ const FacultyCard = (props) => {
       <div className={`${imageName}-photo faculty-image` }  alt="faculty image" /><br />
           <div className="faculty-info-container">
            <h3>{ props.faculty.name } </h3>
-           <p> Bio: { props.faculty.real_bio } </p>
+           <p>  { props.faculty.real_bio } </p>
            </div>
        </div>
       </div>

@@ -12,13 +12,23 @@ const Admissions = ({logged_in}) => {
         </div>
       
       ) : (
-        <div>
+        <div className="private-admissions">
           <p>
-            We're so delighted to have you at Brakebills. 
+            <em>We're so delighted to have you at Brakebills. </em>
           </p>
           <p>
-          If you would like to apply to a new Area of study, please fill out the form below.
+          <em>If you would like to apply to a new Area of study, please fill out the form below.</em>
           </p>
+          <br></br>
+
+          <form >
+            <label>Current Area of Study</label><br></br>
+            <input placeholder=""/>
+            
+
+
+
+          </form>
         </div>
       )
      }

@@ -1,6 +1,6 @@
 import React from 'react';
-import image1 from '../images/homepagevid1.gif'
-import image2 from '../images/library.jpg'
+import image2 from '../images/homepagevid1.gif'
+import image1 from '../images/library.jpg'
 import image3 from '../images/teaching1.jpg'
 import image4 from '../images/lab.jpg'
 import image5 from '../images/library2.jpg'
@@ -12,7 +12,7 @@ const PublicCarousel = () => {
 
     <div className="carousel-container">
 
-<div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
     
     <div class="carousel-item active">
