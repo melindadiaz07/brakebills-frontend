@@ -559,7 +559,7 @@ select.filter-category{
 
 .private-admissions{
   font-size: 1.4rem;
- 
+  margin-bottom: 10vh;
   margin-top: 13vh;
   width: 50vw;
   margin-left: 25vw;
@@ -570,8 +570,21 @@ select.filter-category{
 .private-admissions form{
   text-align: left;
   font-style: none;
-
+  font-size: 1rem !important;
 }
+
+.private-admissions .ui.form .field>label {
+  font-size: 1.2rem !important;
+}
+
+.private-admissions hr{
+  height: 2px;
+  background-image: url(./images/bestgoldleaf.jpg);
+  background-position: center center;
+  border-style: hidden;
+  margin-bottom: 5vh;
+}
+
 
 .faculty-header{
   margin-top: 7vh;
