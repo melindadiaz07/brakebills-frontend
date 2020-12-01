@@ -31,9 +31,11 @@ const MessageBoard = (props) => {
   }
 
   const exitReplies = () => {
+    if(selectedPost){
     let previousEl = document.getElementById(selectedPost.id)
       previousEl.className="single-post-container" 
       setRenderedReplies(null)
+    }
   }
 
   let getPosts = () => {
@@ -47,6 +49,7 @@ const MessageBoard = (props) => {
   }
 
   useEffect(getPosts, [])
+
   let scrollToBottomPosts = () => {
     messagesEnd.current.scrollIntoView({ behavior: "smooth" });
   }
@@ -99,10 +102,13 @@ const MessageBoard = (props) => {
   const filterByCategory = (filter) => {
     if (filter === "All"){
     setFilteredPosts(posts)
+    
     } else {
     let filteredPosts = posts.filter(post => post.category === filter)
     setFilteredPosts(filteredPosts)
+    
     }
+    
   }
 
 
