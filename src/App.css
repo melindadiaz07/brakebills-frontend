@@ -34,8 +34,6 @@ body {
 }
 
 
-
-
 .ui.secondary.menu .item {
   color: rgb(238, 236, 236) !important;  /* Fallback: assume this color ON TOP of image */
   background: url(https://images.creativemarket.com/0.1.0/ps/3117791/300/200/m2/fpc/wm0/oi1o929rioedbm29r6eygrne3onlsvxewbjmvrds3ddquy7jkj2svhi2fbcgeiyi-.jpg?1502725711&s=cf42cc77b82d8850fc8fa96d57f666a1) !important;
@@ -83,8 +81,6 @@ body {
   background-attachment: fixed;
   
 }
-
-
 
 
 .home-page-container h2{
@@ -500,6 +496,7 @@ select.filter-category{
   border-style: hidden;
 }  
 
+
 .admissions-form-container p {
   font-size: 1.5rem;
   text-align: center;
@@ -514,6 +511,14 @@ select.filter-category{
   
 }
 
+.admissions-form-container input{
+  background-color: rgba(255,255,255,0.6) !important;
+}
+
+.admissions-form-container textarea{
+  background-color: rgba(255,255,255,0.6) !important;
+}
+
 .ui.form .field>label{
   color:  white !important; 
   font-size: 1.4rem !important;
@@ -523,7 +528,6 @@ select.filter-category{
 }
 
 .ui.form .field>button{
- 
   margin-top: 20px !important;
   color: rgb(27, 48, 23);
 }
@@ -537,6 +541,10 @@ select.filter-category{
   margin-bottom: 10vh !important;
   /* margin-left: 3vw !important; */
   margin-right: 5vw !important;
+}
+
+.long-answer .ui.input>input{
+  height: 20vh !important;
 }
 
 
@@ -654,8 +662,6 @@ select.filter-category{
   background-color: rgba(255,255,255,0.1);
   color: white;
   padding: 25px;
-  /* margin-bottom: 20vh; */
-
 }
 
 .department-info-container h2 {
@@ -690,7 +696,6 @@ select.filter-category{
   cursor: pointer;
   color: rgb(232, 236, 232);
   padding: 4px;
-  
   border-image: url(./images/bestgoldleaf.jpg) 4 4;
   border-style: double;
   border-width: 1px;
@@ -701,12 +706,10 @@ select.filter-category{
   width: 70vw;
   margin-left: 10vw;
   background-color: rgba(255,255,255,0.2);
-
   color: white;
   position: relative;
   padding: 7vh 10vw;
   text-align: left;
-  
 }
 
 .single-aos{
@@ -733,7 +736,6 @@ select.filter-category{
 .hamishbax-photo{
   background: url(./images/hamishbax.jpg);
   background-size: cover;
- 
 }
 
 
@@ -792,3 +794,4 @@ select.filter-category{
   margin-top: 20px;
   font-style: italic
 }
+
