@@ -115,7 +115,7 @@ body {
 } */
 
  video {
-   filter: brightness(60%);
+   filter: brightness(70%);
  }
 
 span.header-span{
@@ -292,6 +292,7 @@ span.header-span{
 select.filter-category{
   margin-top: 15px;
 }
+
 .posts-container {
   height: 70vh;
   width: 60vw;
@@ -300,10 +301,32 @@ select.filter-category{
   float: left;
   margin-left: 10vw;
   text-align: left;
-  
+  font-family: 'Cormorant Garamond', serif;
   background-color: rgba(255,255,255,0.5);
   color: black;
+
 }
+
+.post-category{
+  float: right;
+  display: block;
+   /* margin-top: -10px;  */
+}  
+
+.post-title{
+ float: right;
+ text-align: right;
+}
+
+.post-content{
+  margin-top: 7vh;
+  padding-left: 1vw;
+  padding-right: 5vw;
+}
+
+/* .post-title-span{
+  font-weight: bold;
+} */
 
 .post-form-container{
   /* border-style: solid; */
@@ -314,7 +337,6 @@ select.filter-category{
   float: left;
   margin-left: 10vw;
   margin-top: 5px;
-  
   background-color: rgba(255,255,255,0.5);
 }
 
@@ -403,7 +425,7 @@ select.filter-category{
   margin: 20px 10px;
   border-color: rgb(228, 228, 226);
   background-color: rgba(255,255,255,0.7);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .single-post-selected{
@@ -722,7 +744,7 @@ select.filter-category{
   font-size: 1.4rem
 }
 
-.henryfogg-photo{
+.deanhenryfogg-photo{
   background: url(./images/henryfog.jpg);
   background-size: cover;
 }
@@ -746,6 +768,11 @@ select.filter-category{
 
 .helenmyrin-photo{
   background: url(./images/helenmyrin.jpg);
+  background-size: cover;
+}
+
+.mischamayakovsky-photo{
+  background: url(./images/mayo.png);
   background-size: cover;
 }
 

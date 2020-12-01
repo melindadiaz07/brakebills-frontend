@@ -5,7 +5,7 @@ const ReplyCard = (props) => {
 
   return(
     <div className="reply-card" >
-      <p>{props.reply.replier}</p>
+      <p><b>{props.reply.replier}</b></p>
       <p>{props.reply.content}</p>
     </div>
   )

@@ -6,7 +6,7 @@ export const fake = () => {
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      Brakebills campus will be closed until March 6th for repair of a gas leak
+      Brakebills Library will be closed until March 6th for repair of a gas leak.
     </div>
     <div class="carousel-item">
     Brakebills campus will be closed until December 6th for repair of a gas leak
@@ -32,10 +32,10 @@ export const real= () => {
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      Brakebills campus will be closed until March 6th due to a lycanthropy outbreak
+      The  Library will be closed until March 6th due to a malfunctioning reshelving spell
     </div>
     <div class="carousel-item">
-    Brakebills campus will be closed until December 6th for repair of a gas leak
+    Reminder that all students must receive permission to ...
 
     </div>
     <div class="carousel-item">
