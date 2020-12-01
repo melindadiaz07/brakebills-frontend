@@ -795,3 +795,9 @@ select.filter-category{
   font-style: italic
 }
 
+
+.carousel-inner .carousel-item {
+  transition: -webkit-transform 1s ease !important;
+  transition: transform 1s ease !important;
+  transition: transform 1s ease, -webkit-transform 1s ease !important;
+}
