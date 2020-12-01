@@ -35,6 +35,8 @@ const MessageBoard = (props) => {
     let previousEl = document.getElementById(selectedPost.id)
       previousEl.className="single-post-container" 
       setRenderedReplies(null)
+    } else {
+      setRenderedReplies([])
     }
   }
 
@@ -97,18 +99,16 @@ const MessageBoard = (props) => {
     let filter = (event.target.value)
     filterByCategory(filter)
     setSelectedPost(null)
+    setRenderedReplies([])
   }
 
   const filterByCategory = (filter) => {
     if (filter === "All"){
     setFilteredPosts(posts)
-    
     } else {
     let filteredPosts = posts.filter(post => post.category === filter)
-    setFilteredPosts(filteredPosts)
-    
+    setFilteredPosts(filteredPosts) 
     }
-    
   }
 
 
