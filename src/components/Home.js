@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import video from '../images/classroomshot.mp4'
-import video2 from '../images/magichomepagevid.mp4'
+import video2 from '../images/magichomepagevid2.mp4'
 import * as announcements from './AnnouncementsCarousel'
 
 

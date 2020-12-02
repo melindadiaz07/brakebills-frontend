@@ -13,11 +13,24 @@ const ReplyCard = (props) => {
 
 
   return(
-    <div className="reply-card" >
-      <button onClick={(event) => deleteReply(event)}> ⚐ </button><br></br>
+    <div>
+      {
+      props.admin === false ?
+    (
+      <div className="reply-card" >
       <p><b>{props.reply.replier}</b></p>
       <p>{props.reply.content}</p>
     </div>
+    )  : 
+    
+    (<div className="reply-card" >
+      <button onClick={(event) => deleteReply(event)}> ⚐ </button><br></br>
+      <p><b>{props.reply.replier}</b></p>
+      <p>{props.reply.content}</p>
+    </div>)
+  
+    }
+  </div>
   )
 }
 export default ReplyCard;

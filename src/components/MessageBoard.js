@@ -24,6 +24,7 @@ const MessageBoard = (props) => {
     }
    }, [])
 
+
   const handleClick = (event, post) => {
     if (selectedPost !== null) {
       let previousEl = document.getElementById(selectedPost.id)
@@ -32,9 +33,15 @@ const MessageBoard = (props) => {
   setSelectedPost(post)
     event.target.parentElement.className="single-post-selected"
     if (post.replies !== null) {
-      setRenderedReplies(post.replies)
+      let sortedReplies = post.replies.sort((a, b) => (a.id > b.id) ? 1 : -1)
+      setRenderedReplies(sortedReplies)
       scrollToBottomReplies()
     } 
+  }
+
+  const resetSelectedOnDelete = () => {
+    setSelectedPost(null)
+    setRenderedReplies(null)
   }
 
   const exitReplies = () => {
@@ -149,7 +156,7 @@ const MessageBoard = (props) => {
 
       <div className="posts-container">
         { !filteredPosts ? null : filteredPosts.map(post => {
-          return <PostCard post={post} key={post.id} handleClick={handleClick} admin={admin} getPosts={getPosts} exitReplies={exitReplies} />
+          return <PostCard post={post} key={post.id} handleClick={handleClick} admin={admin} getPosts={getPosts} exitReplies={exitReplies} resetOnDelete={resetSelectedOnDelete}/>
         })}
         <div ref={messagesEnd} className="bottom-of-messages" />
       </div>

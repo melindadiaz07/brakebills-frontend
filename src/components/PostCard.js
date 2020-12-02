@@ -13,7 +13,10 @@ const PostCard = (props) => {
     fetch(`http://localhost:3000/posts/${props.post.id}`, {
       method: 'DELETE'
     })
-    .then(post => props.getPosts())
+    .then(post => {
+      props.getPosts()
+      props.resetOnDelete()
+    })
     props.getPosts()
   }
 
