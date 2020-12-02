@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import image2 from '../images/homepagevid1.gif'
 import image1 from '../images/library.jpg'
 import image3 from '../images/teaching1.jpg'
-import image4 from '../images/lab.jpg'
+import image4 from '../images/admissions1.png'
 import image5 from '../images/library2.jpg'
 
 const PublicCarousel = () => {
+
 
 
   return (

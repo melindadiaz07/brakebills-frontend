@@ -48,6 +48,7 @@ const  App = () => {
       }} />
 
       <Route exact path='/about' render={()=> {
+        
         return <About logged_in={logged_in}/>
       }} />
 

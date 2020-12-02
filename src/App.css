@@ -357,7 +357,7 @@ select.filter-category{
   border-radius: 2px;
   position: relative;
   top: 20px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.8);
   color: black;
 }
 
@@ -446,10 +446,6 @@ select.filter-category{
   float:right;
   bottom: 12px;
   color: rgb(51, 75, 52);
-  /* background: url(./images/bestgoldleaf.jpg) ;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
   font-family: 'Prata', serif; 
   cursor: pointer;
  
@@ -461,8 +457,6 @@ select.filter-category{
   overflow-y: scroll;
   /* border-bottom-style: solid; */
   border-color: rgb(223, 222, 222);
-  
-
 }
 
 .reply-card{
@@ -485,6 +479,7 @@ select.filter-category{
   width:  calc(20vw - 40px); 
   min-height: calc(20vh - 90px);
   margin-left: 3px;
+  background-color: rgba(255,255,255,0.9);
 }
 
 .reply-submit-btn{
@@ -827,4 +822,10 @@ select.filter-category{
   transition: -webkit-transform 1s ease !important;
   transition: transform 1s ease !important;
   transition: transform 1s ease, -webkit-transform 1s ease !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 9px;
+  position: absolute;
+  top: 25vh;
 }

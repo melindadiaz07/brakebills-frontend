@@ -1,38 +1,37 @@
 import React from 'react';
-import image1 from '../images/hands.jpg'
-import image2 from '../images/homepagevid1.gif'
-import image3 from '../images/sexEd.jpg'
-import image4 from '../images/lab.jpg'
+import image2 from '../images/hands.jpg'
+import image1 from '../images/homepagevid1.gif'
+import image3 from '../images/lab.jpg'
+import image4 from '../images/battle1.gif'
 import image5 from '../images/library2.jpg'
 
 const PrivateCarousel = () => {
-
 
   return (
 
     <div className="carousel-container">
 
-<div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
     
     <div class="carousel-item active">
-      <img class="d-block w-100" src={image1} />
+      <img class="d-block w-100" src={image1} alt=""/>
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src={image2} />
+      <img class="d-block w-100" src={image2} alt=""/>
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src={image3} />
+      <img class="d-block w-100" src={image3} alt=""/>
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src={image4} />
+      <img class="d-block w-100" src={image4} alt=""/>
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src={image5} />
+      <img class="d-block w-100" src={image5} alt=""/>
     </div>
 
    
