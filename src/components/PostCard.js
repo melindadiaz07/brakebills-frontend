@@ -9,14 +9,37 @@ const PostCard = (props) => {
   let category = props.post.category
   let content = props.post.content
 
-  console.log(category)
+  const deletePost = () => {
+    fetch(`http://localhost:3000/posts/${props.post.id}`, {
+      method: 'DELETE'
+    })
+    .then(post => props.getPosts())
+    props.getPosts()
+  }
 
   return(
-    <div className="single-post-container" id={`${props.post.id}`} onClick={(event) => props.handleClick(event, props.post)}>
+
+    <div>
+      { props.admin ? 
+    (<div className="single-post-container" id={`${props.post.id}`} >
+      <b>{username}</b>
+      <p className="post-title"> <button onClick={() => deletePost()}> ⚐ </button><br></br><em>{category}</em> <br></br> - {title} -</p>
+      <p className="post-content">{content}</p>
+      <div className="reply-button" onClick={(event) => props.handleClick(event, props.post)}> reply ↪ </div>
+      
+    </div>) : (
+
+<div className="single-post-container" id={`${props.post.id}`} onClick={(event) => props.handleClick(event, props.post)}>
       <b>{username}</b>
       <p className="post-title"> <em>{category}</em> <br></br> - {title} -</p>
       <p className="post-content">{content}</p>
       <div className="reply-button"> reply ↪ </div>
+      
+    </div>
+
+
+          )
+      }
     </div>
   )
 }

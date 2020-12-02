@@ -304,7 +304,6 @@ select.filter-category{
   font-family: 'Cormorant Garamond', serif;
   background-color: rgba(255,255,255,0.5);
   color: black;
-
 }
 
 .post-category{
@@ -316,6 +315,24 @@ select.filter-category{
 .post-title{
  float: right;
  text-align: right;
+}
+
+.post-title button{
+  font-size: 1rem;
+  border: hidden;
+  padding: 0px 5px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.6);
+
+}
+
+.reply-card button {
+  font-size: 1rem;
+  border: hidden;
+  padding: 0px 5px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.6);
+  float: right;
 }
 
 .post-content{

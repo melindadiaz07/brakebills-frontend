@@ -12,18 +12,25 @@ const MessageBoard = (props) => {
   const [selectedPost, setSelectedPost] = useState(null)
   const [renderedReplies, setRenderedReplies] = useState([])
   const [filteredPosts, setFilteredPosts] = useState(posts)
+  const [admin, setAdmin] = useState(false)
 
   const messagesEnd = useRef()
   const repliesEnd = useRef()
+
+
+  useEffect(() => {
+    if (props.currentUser["admin?"] === true){
+      setAdmin(true)
+    }
+   }, [])
 
   const handleClick = (event, post) => {
     if (selectedPost !== null) {
       let previousEl = document.getElementById(selectedPost.id)
       previousEl.className="single-post-container" 
     }
-
   setSelectedPost(post)
-    event.currentTarget.className="single-post-selected"
+    event.target.parentElement.className="single-post-selected"
     if (post.replies !== null) {
       setRenderedReplies(post.replies)
       scrollToBottomReplies()
@@ -44,13 +51,25 @@ const MessageBoard = (props) => {
     fetch("http://localhost:3000/posts")
     .then(res => res.json())
     .then(postsData => {
-      setPosts(postsData)
-      setFilteredPosts(postsData)
+      let sortedPosts = postsData.sort((a, b) => (a.id > b.id) ? 1 : -1)
+      setPosts(sortedPosts)
+      setFilteredPosts(sortedPosts)
+      if(!selectedPost){
       scrollToBottomPosts()
+      }
     })
   }
 
   useEffect(getPosts, [])
+
+  const rerenderReplies = (reply) => {
+      let index = renderedReplies.indexOf(reply)
+      let newRepliesArray = [...renderedReplies]
+      newRepliesArray.splice(index, 1)
+      setRenderedReplies([...newRepliesArray])
+      getPosts()
+    }
+  
 
   let scrollToBottomPosts = () => {
     messagesEnd.current.scrollIntoView({ behavior: "smooth" });
@@ -130,7 +149,7 @@ const MessageBoard = (props) => {
 
       <div className="posts-container">
         { !filteredPosts ? null : filteredPosts.map(post => {
-          return <PostCard post={post} key={post.id} handleClick={handleClick} />
+          return <PostCard post={post} key={post.id} handleClick={handleClick} admin={admin} getPosts={getPosts} exitReplies={exitReplies} />
         })}
         <div ref={messagesEnd} className="bottom-of-messages" />
       </div>
@@ -141,7 +160,7 @@ const MessageBoard = (props) => {
         <h4 className="replies-box-header"><em>Replies</em></h4>
         { !renderedReplies ? null : 
           renderedReplies.map(reply => {
-            return <ReplyCard reply={reply} key={reply.id}/>
+            return <ReplyCard reply={reply} key={reply.id} admin={admin} rerenderReplies={rerenderReplies} />
           })
         }
         <div ref={repliesEnd} className="bottom-of-replies" />
