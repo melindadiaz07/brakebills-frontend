@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import image2 from '../images/homepagevid1.gif'
-import image1 from '../images/library.jpg'
-import image3 from '../images/teaching1.jpg'
+import image1 from '../images/moscow.jpg'
+import image2 from '../images/library.jpg'
+import image3 from '../images/fountain.jpg'
 import image4 from '../images/admissions1.png'
-import image5 from '../images/library2.jpg'
+// import image5 from '../images/library2.jpg'
 
 const PublicCarousel = () => {
 
@@ -32,9 +32,9 @@ const PublicCarousel = () => {
       <img class="d-block w-100" src={image4} />
     </div>
 
-    <div class="carousel-item">
+    {/* <div class="carousel-item">
       <img class="d-block w-100" src={image5} />
-    </div>
+    </div> */}
 
    
 </div>

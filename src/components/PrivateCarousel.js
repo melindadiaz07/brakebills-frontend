@@ -1,8 +1,8 @@
 import React from 'react';
-import image2 from '../images/hands.jpg'
 import image1 from '../images/homepagevid1.gif'
-import image3 from '../images/lab.jpg'
-import image4 from '../images/battle1.gif'
+import image2 from '../images/classroom2.jpg'
+import image3 from '../images/hands2.png'
+import image4 from '../images/lab.jpg'
 import image5 from '../images/library2.jpg'
 
 const PrivateCarousel = () => {

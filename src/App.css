@@ -765,24 +765,24 @@ select.filter-category{
 }
 
 .eleanorlipson-photo{
-  background: url(./images/eleanorlipson.jpg);
+  background: url(./images/lipson.png);
   background-size: cover;
 
 }
 
 .hamishbax-photo{
-  background: url(./images/hamishbax.jpg);
+  background: url(./images/bax.jpg);
   background-size: cover;
 }
 
 
 .pearlsunderland-photo{
-  background: url(./images/pearlsunderland.jpg);
+  background: url(./images/sunderland.png);
   background-size: cover;
 }
 
 .helenmyrin-photo{
-  background: url(./images/helenmyrin.jpg);
+  background: url(./images/helen.jpg);
   background-size: cover;
 }
 
