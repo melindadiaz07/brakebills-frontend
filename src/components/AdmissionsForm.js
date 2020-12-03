@@ -19,13 +19,13 @@ const [change8, setChange8] = useState("4")
 
 
 let cascadeChange1 = () => {
-  setChange1("☬")
+  setChange1("⚖")
   setChange2("Botanica Occultus")
   setTimeout(function() {setChange1("24")}, 1000)
   setTimeout(function() {setChange2("Kings of Britain")}, 2000)
-  setTimeout(function() {setChange3("〆")}, 3000)
+  setTimeout(function() {setChange3("〆")}, 2000)
   setTimeout(function() {setChange3("1")}, 5000)
-  setTimeout(function() {setChange4("☾")}, 4000)
+  setTimeout(function() {setChange4("☾")}, 3000)
   setTimeout(function() {setChange4("12")}, 6000)
 }
 

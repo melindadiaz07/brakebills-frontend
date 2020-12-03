@@ -14,6 +14,7 @@ const MessageBoard = (props) => {
   const [filteredPosts, setFilteredPosts] = useState(posts)
   const [admin, setAdmin] = useState(false)
 
+
   const messagesEnd = useRef()
   const repliesEnd = useRef()
 
@@ -45,12 +46,16 @@ const MessageBoard = (props) => {
   }
 
   const exitReplies = () => {
-    if(selectedPost){
+    if(selectedPost !== null){
     let previousEl = document.getElementById(selectedPost.id)
       previousEl.className="single-post-container" 
       setRenderedReplies(null)
+      setSelectedPost(null)
+      getPosts()
     } else {
       setRenderedReplies([])
+      setSelectedPost(null)
+      getPosts()
     }
   }
 
@@ -172,9 +177,9 @@ const MessageBoard = (props) => {
         }
         <div ref={repliesEnd} className="bottom-of-replies" />
         </div>
-        { !selectedPost ? null : 
+        { !selectedPost  ? null : 
         <div className="reply-form-container">
-          <ReplyForm handleSubmit={handleReplySubmit} replyTo={selectedPost.user.username} currentUser={props.currentUser}/>
+          <ReplyForm handleSubmit={handleReplySubmit} replyTo={selectedPost.user.username} currentUser={props.currentUser} />
         </div> }
       </div> 
 

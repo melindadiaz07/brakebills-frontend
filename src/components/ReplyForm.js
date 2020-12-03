@@ -16,7 +16,7 @@ const ReplyForm = (props) => {
   }
 
   return(
-    <div >
+    <div>
       <form  onSubmit={(event) => {
         props.handleSubmit(event, reply)
         clearForm()
