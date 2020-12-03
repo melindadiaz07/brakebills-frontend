@@ -32,11 +32,11 @@ const PostCard = (props) => {
       
     </div>) : (
 
-<div className="single-post-container" id={`${props.post.id}`} onClick={(event) => props.handleClick(event, props.post)}>
+<div className="single-post-container" id={`${props.post.id}`}>
       <b>{username}</b>
       <p className="post-title"> <em>{category}</em> <br></br> - {title} -</p>
       <p className="post-content">{content}</p>
-      <div className="reply-button"> reply ↪ </div>
+      <div className="reply-button" onClick={(event) => props.handleClick(event, props.post)}> reply ↪ </div>
       
     </div>
 

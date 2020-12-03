@@ -10,11 +10,11 @@ export const fake = () => {
       Brakebills Library will be closed until March 6th for repair of a gas leak.
     </div>
     <div class="carousel-item">
-    Brakebills campus will be closed until December 6th for repair of a gas leak
+    The university will conduct a test of its emergency notification system Wednesday at 12:15 p.m.
 
     </div>
     <div class="carousel-item">
-    Brakebills campus will be closed until March 6th for repair of a gas leak
+    Administrators are keeping an eye on the developing stormfront and will announce snow closures if appropriate.
 
     </div>
   </div>
@@ -36,7 +36,7 @@ export const real= () => {
       The  Library will be closed until March 6th due to a malfunctioning reshelving spell
     </div>
     <div class="carousel-item">
-    Reminder that all students must receive permission to ...
+    Reminder that all students must receive permission to access the artifacts repository.
 
     </div>
     <div class="carousel-item">

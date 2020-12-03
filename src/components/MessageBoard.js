@@ -28,6 +28,7 @@ const MessageBoard = (props) => {
 
   const handleClick = (event, post) => {
     if (selectedPost !== null) {
+      console.log(event.target)
       let previousEl = document.getElementById(selectedPost.id)
       previousEl.className="single-post-container" 
     }
@@ -136,10 +137,12 @@ const MessageBoard = (props) => {
   const filterByCategory = (filter) => {
     if (filter === "All"){
     setFilteredPosts(posts)
+    
     } else {
     let filteredPosts = posts.filter(post => post.category === filter)
     setFilteredPosts(filteredPosts) 
     }
+    
   }
 
 
