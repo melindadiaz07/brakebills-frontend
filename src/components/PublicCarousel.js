@@ -17,19 +17,19 @@ const PublicCarousel = () => {
   <div class="carousel-inner" role="listbox">
     
     <div class="carousel-item active">
-      <img class="d-block w-100" src={image1} />
+      <img class="d-block w-100" src={image1} alt="" />
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src={image2} />
+      <img class="d-block w-100" src={image2} alt=""/>
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src={image3} />
+      <img class="d-block w-100" src={image3} alt=""/>
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src={image4} />
+      <img class="d-block w-100" src={image4} alt=""/>
     </div>
 
     {/* <div class="carousel-item">
