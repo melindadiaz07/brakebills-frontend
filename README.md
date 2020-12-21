@@ -1,7 +1,7 @@
 # README
 
 
-![alt text](./images/sexEd.jpg)
+![screenshot](sexEd.jpg)
 
 link to project's backend repo: 
 - https://github.com/melindadiaz07/brakebills-backend
