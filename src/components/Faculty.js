@@ -9,8 +9,10 @@ const Faculty = ({logged_in}) => {
     fetch("http://localhost:3000/faculties")
     .then(res => res.json())
     .then(facultyList => {
-      console.log(facultyList[0])
-      setFaculty(facultyList)
+      let sorted = facultyList.sort(function(a, b) {
+        return a.id - b.id;
+    });
+      setFaculty(sorted)
     })
   }
 
