@@ -1,7 +1,13 @@
 # README
 
+
+![alt text](./images/sexEd.jpg)
+
 link to project's backend repo: 
 - https://github.com/melindadiaz07/brakebills-backend
+
+
+
 
 Built with React.js
 
