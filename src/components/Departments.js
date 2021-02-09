@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import AreasOfStudy from './AreasOfStudy'
+// import AreasOfStudy from './AreasOfStudy'
 import DepartmentCard from './DepartmentCard'
 
 const Departments = ({logged_in}) => {

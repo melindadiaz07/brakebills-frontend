@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Home from './components/Home'
 import Admissions from './components/Admissions'
 import About from './components/About'
@@ -8,7 +8,7 @@ import Login from './components/Login'
 import NavBar from './components/NavBar'
 import Faculty from './components/Faculty'
 import MessageBoard from './components/MessageBoard'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 
 

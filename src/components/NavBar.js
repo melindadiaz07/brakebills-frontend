@@ -1,7 +1,7 @@
 
 import React, { Fragment } from "react";
 import { Menu } from "semantic-ui-react";
-import { NavLink, withRouter, Redirect, Switch, useHistory } from "react-router-dom";
+import { NavLink, withRouter, useHistory } from "react-router-dom";
 import logo from '../images/goldlogo2.png'
 
 
@@ -114,7 +114,6 @@ const NavBar = ({logged_in, getCurrentUser, logOut, logIn, location: { pathname 
           <Menu.Item to="/logout" name="Logout" onClick={() => {
             logOut()
             redirectHome()
-            // logout()
               }
             } />
         </Menu.Menu>
